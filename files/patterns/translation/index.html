@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Translation patterns &mdash; Open Data Services - Standards Lab Handbook 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex/"/>
+        <link rel="search" title="Search" href="../../search/"/>
+    <link rel="top" title="Open Data Services - Standards Lab Handbook 0.1 documentation" href="../../"/>
+        <link rel="up" title="Pattern library" href="../"/>
+        <link rel="next" title="Versioning Patterns" href="../versioning/"/>
+        <link rel="prev" title="Internationalisation patterns" href="../i18n/"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../" class="icon icon-home"> Open Data Services - Standards Lab Handbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../development/">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../adoption/">Adoption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learning/">Monitoring &amp; learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/">Component library</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Pattern library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../schema/">Schema patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/">Documentation patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../i18n/">Internationalisation patterns</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Translation patterns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#develop-a-glossary-first">Develop a glossary first</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#solution">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#related-components">Related components</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#separate-translation-and-review">Separate translation and review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#translation-feedback">Translation feedback</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Method</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#normative-documentation">Normative documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#translation-policy">Translation policy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../versioning/">Versioning Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../policy/">Policy design patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/">Meta</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Open Data Services - Standards Lab Handbook</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../">Pattern library</a> &raquo;</li>
+        
+      <li>Translation patterns</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/patterns/translation.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div></div></blockquote>
+<div class="section" id="translation-patterns">
+<span id="patternpage-translation"></span><h1>Translation patterns<a class="headerlink" href="#translation-patterns" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#pattern-glossary"><span class="std std-ref">Develop a glossary first</span></a></li>
+<li><a class="reference internal" href="#pattern-separate-translation-review"><span class="std std-ref">Separate translation and review</span></a></li>
+<li><a class="reference internal" href="#pattern-translation-feedback"><span class="std std-ref">Translation feedback</span></a></li>
+<li><a class="reference internal" href="#pattern-translation-normative"><span class="std std-ref">Normative documentation</span></a></li>
+<li><a class="reference internal" href="#pattern-translation-policy"><span class="std std-ref">Translation policy</span></a></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="develop-a-glossary-first">
+<span id="pattern-glossary"></span><h2>Develop a glossary first<a class="headerlink" href="#develop-a-glossary-first" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem">
+<h3>Problem<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h3>
+<p>Terms may be translated inconsistently, or technical translators may not select the right term of art.</p>
+</div>
+<div class="section" id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
+<p>Develop a glossary first, to include the key technical terms and terms-of-art used in the standard.</p>
+</div>
+<div class="section" id="method">
+<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h3>
+<p>Write a concise description of each of these terms <em>in the context of the standard</em>. This can ensure terms are used consistently in the main language, and that translators have information to base their translations on.</p>
+</div>
+<div class="section" id="related-components">
+<h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../../components/#component-glossary"><span class="std std-ref">Glossary</span></a>;</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="separate-translation-and-review">
+<span id="pattern-separate-translation-review"></span><h2>Separate translation and review<a class="headerlink" href="#separate-translation-and-review" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Problem<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Mistakes in translation, or translations that make wrong assumptions about the audience, can cause a lot of confusion.</p>
+</div>
+<div class="section" id="id2">
+<h3>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Separate translation and review. Have the same reviewer for a language to ensure consistency.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="translation-feedback">
+<span id="pattern-translation-feedback"></span><h2>Translation feedback<a class="headerlink" href="#translation-feedback" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Problem<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Users may have questions or suggestions to improve a translation.</p>
+</div>
+<div class="section" id="id4">
+<h3>Solution<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Provide tools to allow them to comment on the translated text.</p>
+</div>
+<div class="section" id="id5">
+<h3>Method<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Tools like hypothes.is can support non-technical users (who wouldn't use GitHub) to annotate a schema.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="normative-documentation">
+<span id="pattern-translation-normative"></span><h2>Normative documentation<a class="headerlink" href="#normative-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Problem<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Documentation may need to be improved. Improvements can be delayed if waiting for a new version</p>
+</div>
+<div class="section" id="id7">
+<h3>Solution<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Clearly separate normative and non-normative documentation so that updates can be made more easily.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="translation-policy">
+<span id="pattern-translation-policy"></span><h2>Translation policy<a class="headerlink" href="#translation-policy" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>Problem<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Users need to know the status of a translation</p>
+</div>
+<div class="section" id="id9">
+<h3>Solution<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Develop a clear policy and process for managing translations. Clearly indicate the authoritative language.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../versioning/" class="btn btn-neutral float-right" title="Versioning Patterns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../i18n/" class="btn btn-neutral" title="Internationalisation patterns" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Open Data Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+    <a href="../../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+
+</body>
+</html>

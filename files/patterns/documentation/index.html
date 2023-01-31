@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentation patterns &mdash; Open Data Services - Standards Lab Handbook 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex/"/>
+        <link rel="search" title="Search" href="../../search/"/>
+    <link rel="top" title="Open Data Services - Standards Lab Handbook 0.1 documentation" href="../../"/>
+        <link rel="up" title="Pattern library" href="../"/>
+        <link rel="next" title="Internationalisation patterns" href="../i18n/"/>
+        <link rel="prev" title="Schema patterns" href="../schema/"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../" class="icon icon-home"> Open Data Services - Standards Lab Handbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../development/">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../adoption/">Adoption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learning/">Monitoring &amp; learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/">Component library</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Pattern library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../schema/">Schema patterns</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation patterns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#single-source-of-truth">Single Source of Truth</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#solution">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#issue-tracker">Issue tracker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Method</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#version-control-and-changelogs-for-the-schema-and-documentation">Version control and changelogs for the schema and documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#related-patterns">Related patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#governance-process-for-normative-changes-to-the-schema-and-documentation">Governance process for normative changes to the schema and documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Related patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#branch-and-release-management">Branch and release management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Related patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#automated-build-processes">Automated build processes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id18">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">Related patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reproducible-builds">Reproducible builds</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id23">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">Related patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deployment-and-rollback">Deployment and rollback</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id28">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id31">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../i18n/">Internationalisation patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translation/">Translation patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../versioning/">Versioning Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../policy/">Policy design patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/">Meta</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Open Data Services - Standards Lab Handbook</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../">Pattern library</a> &raquo;</li>
+        
+      <li>Documentation patterns</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/patterns/documentation.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div></div></blockquote>
+<div class="section" id="documentation-patterns">
+<span id="patternpage-documentation"></span><h1>Documentation patterns<a class="headerlink" href="#documentation-patterns" title="Permalink to this headline">¶</a></h1>
+<p>This section outlines a number of common patterns used to maintain documentation.</p>
+<ul class="simple">
+<li><a class="reference internal" href="#pattern-ssot"><span class="std std-ref">Single Source of Truth</span></a></li>
+<li><a class="reference internal" href="#pattern-issue-tracker"><span class="std std-ref">Issue tracker</span></a></li>
+<li><a class="reference internal" href="#pattern-version-control-changelog"><span class="std std-ref">Version control and changelogs for the schema and documentation</span></a></li>
+<li><a class="reference internal" href="#pattern-governance-normative"><span class="std std-ref">Governance process for normative changes to the schema and documentation</span></a></li>
+<li><a class="reference internal" href="#pattern-branch-release-management"><span class="std std-ref">Branch and release management</span></a></li>
+<li><a class="reference internal" href="#pattern-automated-build"><span class="std std-ref">Automated build processes</span></a></li>
+<li><a class="reference internal" href="#pattern-reproducible-builds"><span class="std std-ref">Reproducible builds</span></a></li>
+<li><a class="reference internal" href="#pattern-deployment-rollback"><span class="std std-ref">Deployment and rollback</span></a></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="single-source-of-truth">
+<span id="pattern-ssot"></span><h2>Single Source of Truth<a class="headerlink" href="#single-source-of-truth" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem">
+<h3>Problem<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h3>
+<p>Consider a piece of documentation about how a field within the data standard works.</p>
+<ul class="simple">
+<li>This field will probably have a name and a description about how it is used.</li>
+<li>Someone will write that down somewhere.</li>
+<li>Someone else will share that with other people, via email, on a web page, in a pdf, in a presentation, as guidance in a data collection tool, etc</li>
+<li>Those people may introduce small changes, errors, or even improvements as they reproduce the information.</li>
+<li>Further, the ‘master’ description may change over time. How do people know whether the new description, or the old one is the correct one to use? Which (trusted) source should they use? An email someone sent, or the PDF they have in their hand, or…?</li>
+</ul>
+<p>In a worst case, people might incorrectly copy the structural information about the standard, e.g. a field name, or where it is nested; or, they might miss a field from a list that's intended to be complete.</p>
+</div>
+<div class="section" id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
+<p>Establish a Single Source of Truth (SSOT) for documentation about how the standard works. Other copies should copy verbatim from this - any improvements should be made in the SSOT.</p>
+</div>
+<div class="section" id="method">
+<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h3>
+<p>We use a <a class="reference internal" href="#pattern-version-control-changelog"><span class="std std-ref">GitHub repository</span></a> to store our SSOT, as this provides very explicit and fine-grained versioning</p>
+<p>In order to ensure documentation is pulled from the SSOT, copies should preferentially be made programmatically.</p>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>For 360Giving, the following are all generated programmatically from the <a class="reference external" href="https://github.com/ThreeSixtyGiving/standard/blob/master/schema/360-giving-schema.json">JSON Schema SSOT</a>:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://standard.threesixtygiving.org/en/latest/reference/#grants-sheet">Reference documentation</a></li>
+<li><a class="reference external" href="http://standard.threesixtygiving.org/en/latest/#templates">Spreadsheet templates</a></li>
+<li><a class="reference external" href="http://grantnav.threesixtygiving.org/">GrantNav</a> and the <a class="reference external" href="https://dataquality.threesixtygiving.org/">Data Quality Tool</a> look up human readable titles in the schema.</li>
+</ul>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="issue-tracker">
+<span id="pattern-issue-tracker"></span><h2>Issue tracker<a class="headerlink" href="#issue-tracker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Problem<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>How do we keep track of suggested changes to the standard: new fields, bug fixes etc.</p>
+</div>
+<div class="section" id="id2">
+<h3>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>An issue tracker</p>
+</div>
+<div class="section" id="id3">
+<h3>Method<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>We use GitHub issues.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="version-control-and-changelogs-for-the-schema-and-documentation">
+<span id="pattern-version-control-changelog"></span><h2>Version control and changelogs for the schema and documentation<a class="headerlink" href="#version-control-and-changelogs-for-the-schema-and-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Problem<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>It is important to know who changed what and when in a standard, for purposes of:</p>
+<ul class="simple">
+<li>Auditing changes that have been made</li>
+<li>Reverting changes</li>
+<li>Understanding the context that lead to the way the standard is now</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Solution<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Using <strong>version control</strong> for the standard schema and documentation provides a full version history of changes. Tools like git/GitHub provide tooling to inspect who editing a specific line of a file.  (&quot;git blame&quot;)</p>
+<p>A <strong>changelog</strong> provides a less granular view, that is easier/quicker for humans to read, to get a general overview of what has changed.</p>
+<p>Both version control commits and changelog entries can link to issues in an <a class="reference internal" href="#pattern-issue-tracker"><span class="std std-ref">issue tracker</span></a>, to give more info and discussion about how/why the change happened.</p>
+</div>
+<div class="section" id="id6">
+<h3>Method<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id7">
+<h3>Example<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>e.g. for OCDS we have:</p>
+<ul class="simple">
+<li>Changelog - <a class="reference external" href="http://standard.open-contracting.org/latest/en/schema/changelog/">http://standard.open-contracting.org/latest/en/schema/changelog/</a></li>
+<li>History of every individual change to the OCDS docs/schema - <a class="reference external" href="https://github.com/open-contracting/standard/commits/1.1">https://github.com/open-contracting/standard/commits/1.1</a></li>
+<li>When was each line in any given file last changed - <a class="reference external" href="https://github.com/open-contracting/standard/blame/1.1/schema/release-schema.json">https://github.com/open-contracting/standard/blame/1.1/schema/release-schema.json</a></li>
+</ul>
+</div>
+<div class="section" id="related-patterns">
+<h3>Related patterns<a class="headerlink" href="#related-patterns" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#pattern-reproducible-builds"><span class="std std-ref">Reproducible builds</span></a>; <a class="reference internal" href="../versioning/#patternpage-versioning"><span class="std std-ref">Versioning Patterns</span></a></p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="governance-process-for-normative-changes-to-the-schema-and-documentation">
+<span id="pattern-governance-normative"></span><h2>Governance process for normative changes to the schema and documentation<a class="headerlink" href="#governance-process-for-normative-changes-to-the-schema-and-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>Problem<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>There should be a <a class="reference external" href="section-revision-process">revision process</a> for substantial changes to a standard, that require a new Major/minor release (see <a class="reference internal" href="../versioning/#pattern-semver"><span class="std std-ref">Semantic Versioning</span></a>).
+However, we also want to make minor fixes as part of a &quot;patch&quot; release.</p>
+</div>
+<div class="section" id="id9">
+<h3>Solution<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>A lighter weight review process for &quot;patch&quot; releases.</p>
+</div>
+<div class="section" id="id10">
+<h3>Method<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id11">
+<h3>Example<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>For OCDS patch releases, we have a 7 day comment period. e.g. <a class="reference external" href="https://groups.google.com/a/open-contracting.org/forum/#%21topic/standard-discuss/oV5yG7fQF_0">https://groups.google.com/a/open-contracting.org/forum/#!topic/standard-discuss/oV5yG7fQF_0</a></p>
+</div>
+<div class="section" id="id12">
+<h3>Related patterns<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../versioning/#pattern-normative"><span class="std std-ref">Normative and non-normative content</span></a>;</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="branch-and-release-management">
+<span id="pattern-branch-release-management"></span><h2>Branch and release management<a class="headerlink" href="#branch-and-release-management" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>Problem<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>We want to provide multiple versions of the documentation and schema at one time.</p>
+</div>
+<div class="section" id="id14">
+<h3>Solution<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>Branches corresponding to different deploys of the standard.
+Tags for specific patch releases of the standard.</p>
+</div>
+<div class="section" id="id15">
+<h3>Method<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>Deploying different copies of the docs for different versions of the standard.</p>
+<p>Making it easy to deploy a copy for any branch.</p>
+</div>
+<div class="section" id="id16">
+<h3>Example<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>OCDS:
+Branches are named: <code class="docutils literal"><span class="pre">Major.minor(-dev)</span></code> e.g. <code class="docutils literal"><span class="pre">1.0</span></code>, <code class="docutils literal"><span class="pre">1.1</span></code>, <code class="docutils literal"><span class="pre">1.0-dev</span></code>, <code class="docutils literal"><span class="pre">1.1-dev</span></code>
+Releases are named: <code class="docutils literal"><span class="pre">Major__minor__path</span></code> e.g. <code class="docutils literal"><span class="pre">1__0__3</span></code>, <code class="docutils literal"><span class="pre">1__1__2</span></code></p>
+</div>
+<div class="section" id="id17">
+<h3>Related patterns<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#pattern-automated-build"><span class="std std-ref">Automated build processes</span></a>;</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="automated-build-processes">
+<span id="pattern-automated-build"></span><h2>Automated build processes<a class="headerlink" href="#automated-build-processes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h3>Problem<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>Normally, building the standard documentation and publishing the schema is a complicated process involving many steps to run and test.
+To save time, and to avoid mistakes, these need to be run automatically. Feedback needs to be given to the documentation or schema writers to check if their changes look correct.
+Also, checks regarding the integrity of the documentation and schema need to be run for every change made.</p>
+</div>
+<div class="section" id="id19">
+<h3>Solution<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>Use continuous integration to run the tests and publish a version of the docs for every branch in the standard documentation.
+This means that the integrity tests are run and you can see version of that branch schema/documentation online.</p>
+</div>
+<div class="section" id="id20">
+<h3>Method<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>We use two different automated build services, for different projects:</p>
+<p>(1) <a class="reference external" href="https://readthedocs.org/">Read the docs</a> is designed specifically for building Sphinx docs. It will rebuild a version of the documentation every time a commit if pushed to the corresponding branch on GitHub. Read the Docs being designed specifically for Sphinx is useful because it will automatically hosts the docs, and provides a version/language switcher out of the docs. It gives a lot of control (e.g. you can have whatever custom directives and theming you want, you can point a custom domain at it), but is less flexible than a generic build service. It also requires a manual step to add a new branch/version to the docs. We use Read the Docs for lots of smaller docs sites</p>
+<p>(2) <a class="reference external" href="https://github.com/features/actions">GitHub Actions</a> - is a generic build service (again building every time something is pushed to GitHub), so requires a bit more setup than Read the Docs, but also gives you maximum flexibility over what commands get run. It can also run tests of the documentation/schema before the build. It doesn’t host docs, but can be set up to push the built docs to a hosting provider of your choice.</p>
+</div>
+<div class="section" id="id21">
+<h3>Example<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>For OCDS we have a <a class="reference external" href="https://github.com/open-contracting/standard/blob/1.1-dev/.github/workflows/ci.yml">GitHub Actions script</a> that runs the tests and deploys all the branches.</p>
+</div>
+<div class="section" id="id22">
+<h3>Related patterns<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#pattern-branch-release-management"><span class="std std-ref">Branch and release management</span></a>;</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="reproducible-builds">
+<span id="pattern-reproducible-builds"></span><h2>Reproducible builds<a class="headerlink" href="#reproducible-builds" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h3>Problem<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<p>It is important to be able to see what the standard documentation used to look like:</p>
+<ul class="simple">
+<li>To audit changes where <a class="reference internal" href="#pattern-version-control-changelog"><span class="std std-ref">version control or changelogs</span></a> are too confusing or not sufficient.</li>
+<li>To revert to a known good copy of the standard documentation, if something has gone wrong since.</li>
+</ul>
+<p>In order to do this we need to be able to reproduce the same HTML (and other format) outputs for any given commit of the standard.</p>
+<p><a class="reference internal" href="#pattern-version-control-changelog"><span class="std std-ref">Version control</span></a> provides a basis to do this, with a full history of commits to the standard and docs. However, the build process for the documentation may rely on external scripts and resources that may change independently of the standard's revision process.</p>
+</div>
+<div class="section" id="id24">
+<h3>Solution<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<p>The solution is to ensure that all external scripts and resources are pulled in at a specific version.</p>
+</div>
+<div class="section" id="id25">
+<h3>Method<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<p>Some specific examples of how we pull in specific versions:</p>
+<ul class="simple">
+<li>Pin Python dependencies to a specific version</li>
+<li>When pulling in other git repositories, ask for a specific commit or tag</li>
+<li>Commit files that are pulled from non-versioned platforms - e.g. commit all .po files instead of fetching them from Transifex during the build.</li>
+<li>Always build from a clean repository checkout to ensure that you haven’t got any extra files, or uncommitted changes. (Travis and readthedocs do this by default).</li>
+</ul>
+<p>Note that in some cases, reproducibility requirements might be relaxed. For example, a standard may be configured to always build with the latest version of an external theme, and so this would not be pinned.</p>
+</div>
+<div class="section" id="id26">
+<h3>Example<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id27">
+<h3>Related patterns<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#pattern-version-control-changelog"><span class="std std-ref">Version control</span></a>; <a class="reference internal" href="#pattern-deployment-rollback"><span class="std std-ref">Deployment and rollback</span></a>;</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="deployment-and-rollback">
+<span id="pattern-deployment-rollback"></span><h2>Deployment and rollback<a class="headerlink" href="#deployment-and-rollback" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id28">
+<h3>Problem<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes the build process for a new version of a standard can go wrong.</p>
+<p>Author-error can lead to mistakes in the standard, external dependencies may have been deleted from their source, or a key software service may be down.</p>
+</div>
+<div class="section" id="id29">
+<h3>Solution<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<p>'live' releases of a standard should be manually deployed, and it should be possible to rollback changes at any time if problems are detected.</p>
+</div>
+<div class="section" id="id30">
+<h3>Method<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<p>The build and deployment process for the standard copies compiled static HTML files to the server in a folder named based on the branch and date of build.</p>
+<p>A symlink from the branch name, to this datestamped folder is then created.</p>
+<p>This allows an administrator with access to the server to instantly switch the symlink to point to any new or previous build as required.</p>
+<p>The build process can be configured so that the symlink for full <strong>releases</strong> of the standard are only ever edited manually, preventing accidental changes to releases in use.</p>
+</div>
+<div class="section" id="id31">
+<h3>Example<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<p>Currently we only use this approach for OCDS.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../i18n/" class="btn btn-neutral float-right" title="Internationalisation patterns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../schema/" class="btn btn-neutral" title="Schema patterns" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Open Data Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+    <a href="../../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+
+</body>
+</html>

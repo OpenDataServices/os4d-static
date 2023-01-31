@@ -1,0 +1,2866 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Component library &mdash; Open Data Services - Standards Lab Handbook 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex/"/>
+        <link rel="search" title="Search" href="../search/"/>
+    <link rel="top" title="Open Data Services - Standards Lab Handbook 0.1 documentation" href="../"/>
+        <link rel="next" title="Pattern library" href="../patterns/"/>
+        <link rel="prev" title="Monitoring &amp; learning" href="../learning/"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../" class="icon icon-home"> Open Data Services - Standards Lab Handbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../development/">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../adoption/">Adoption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../learning/">Monitoring &amp; learning</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Component library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#components">Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#advocacy-plan">Advocacy Plan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prioritisation-factors">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deprioritisation-factors">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#related-components">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#related-patterns">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#blog">Blog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#brand-agreements">Brand Agreements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#brand-guidance">Brand Guidance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#case-studies">Case Studies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id22">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#communications-plan">Communications Plan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id29">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id31">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id32">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id33">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id34">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id35">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#demonstration-applications">Demonstration Applications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id36">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id37">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id38">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id39">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id40">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id41">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id42">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#discourse-forum">Discourse Forum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id43">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id44">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id45">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id46">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id47">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id48">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id49">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#draft-commitments">Draft Commitments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id50">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id51">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id52">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id53">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id54">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id55">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#glossary">Glossary</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id57">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id58">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id59">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id60">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id61">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id62">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id63">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#guidance-documentation">Guidance Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id64">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id65">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id66">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id67">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id68">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id69">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id70">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#icons">Icons</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id71">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id72">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id73">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id74">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id75">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id76">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id77">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#logo">Logo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id78">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id79">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id80">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id81">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id82">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id83">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id84">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#principles">Principles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id85">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id86">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id87">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id88">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id89">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id90">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id91">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#progressive-enhancement-framework">Progressive Enhancement Framework</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id92">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id93">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id94">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id95">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id96">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id97">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id98">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#publication-levels">Publication Levels</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id99">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id100">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id101">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id102">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id103">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id104">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id105">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#publisher-ranking">Publisher Ranking</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id106">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id107">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id108">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id109">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id110">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id111">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id112">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-data-license">Recommended Data License</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id113">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id114">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id115">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id116">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id117">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id118">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id119">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tutorial-videos">Tutorial Videos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id120">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id121">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id122">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id123">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id124">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id125">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id126">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#microblogging">Microblogging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id127">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id128">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id129">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id130">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id131">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id132">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id133">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#website">Website</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id134">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id135">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id136">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id137">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id138">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id139">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id140">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#api-specification">API Specification</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id141">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id142">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id143">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id144">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id145">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id146">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id147">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#codelists">Codelists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id148">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id149">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id150">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id151">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id152">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id153">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id154">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#contributor-guidelines">Contributor Guidelines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id155">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id156">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id157">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id158">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id159">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id160">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id161">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#developer-guidelines">Developer Guidelines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id162">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id163">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id164">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id165">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id166">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id167">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id168">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#contributors-agreement">Contributors Agreement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id169">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id170">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id171">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id172">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id173">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id174">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id175">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conversion-tools">Conversion Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id176">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id177">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id178">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id179">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id180">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id181">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id182">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#email-list">Email List</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id183">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id184">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id185">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id186">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id187">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id188">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id189">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#data-aggregator">Data Aggregator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id190">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id191">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id192">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id193">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id194">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id195">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id196">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#example-data">Example Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id197">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id198">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id199">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id200">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id201">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id202">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id203">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#faqs">FAQs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id204">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id205">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id206">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id207">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id208">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id209">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id210">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#field-level-mapping-template">Field-level Mapping Template</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id211">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id212">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id213">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id214">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id215">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id216">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id217">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started-documentation">Getting Started Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id218">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id219">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id220">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id221">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id222">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id223">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id224">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#issue-tracker">Issue Tracker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id225">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id226">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id227">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id228">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id229">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id230">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id231">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#helpdesk-email-address">Helpdesk Email Address</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id232">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id233">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id234">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id235">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id236">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id237">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id238">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#helpdesk-phone-number">Helpdesk Phone Number</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id239">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id240">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id241">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id242">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id243">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id244">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id245">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation-plan-template">Implementation Plan Template</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id246">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id247">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id248">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id249">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id250">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id251">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id252">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#maintenance-handbook">Maintenance Handbook</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id253">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id254">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id255">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id256">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id257">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id258">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id259">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#online-validator">Online Validator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id260">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id261">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id262">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id263">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id264">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id265">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id266">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#quality-tool">Quality Tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id267">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id268">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id269">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id270">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id271">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id272">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id273">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-fields">Recommended Fields</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id274">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id275">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id276">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id277">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id278">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id279">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id280">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-documentation">Reference Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id281">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id282">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id283">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id284">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id285">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id286">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id287">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reference-lists">Reference Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id288">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id289">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id290">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id291">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id292">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id293">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id294">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#registry-of-datasets">Registry Of Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id295">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id296">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id297">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id298">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id299">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id300">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id301">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#required-fields">Required Fields</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id302">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id303">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id304">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id305">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id306">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id307">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id308">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#research-report">Research Report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id309">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id310">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id311">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id312">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id313">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id314">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id315">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rules-for-additional-checks">Rules For Additional Checks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id316">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id317">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id318">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id319">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id320">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id321">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id322">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#schema">Schema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id323">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id324">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id325">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id326">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id327">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id328">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id329">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#self-certification">Self-Certification</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id330">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id331">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id332">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id333">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id334">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id335">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id336">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#shared-documents-folder">Shared Documents Folder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id337">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id338">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id339">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id340">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id341">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id342">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id343">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#slack">Slack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id344">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id345">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id346">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id347">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id348">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id349">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id350">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#specification">Specification</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id351">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id352">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id353">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id354">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id355">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id356">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id357">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spreadsheet-template">Spreadsheet Template</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id358">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id359">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id360">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id361">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id362">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id363">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id364">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#training-resources">Training Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id365">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id366">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id367">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id368">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id369">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id370">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id371">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#unit-tests">Unit Tests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id372">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id373">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id374">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id375">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id376">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id377">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id378">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#use-cases">Use Cases</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id379">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id380">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id381">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id382">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id383">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id384">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id385">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#use-case-mapping">Use-Case Mapping</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id386">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id387">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id388">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id389">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id390">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id391">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id392">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#user-tutorials">User Tutorials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id393">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id394">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id395">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id396">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id397">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id398">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id399">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extensions-registry">Extensions Registry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id400">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id401">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id402">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id403">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id404">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id405">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id406">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extensions-mechanism">Extensions Mechanism</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id407">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id408">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id409">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id410">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id411">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id412">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id413">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#workshops">Workshops</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id414">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id415">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id416">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id417">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id418">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id419">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id420">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#governance-body">Governance Body</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id421">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id422">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id423">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id424">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id425">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id426">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id427">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dashboard-data-publication-statistics">Dashboard (data publication statistics)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id428">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id429">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id430">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id431">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id432">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id433">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id434">Related Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#contact-relationship-management-crm">Contact Relationship Management (CRM)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id435">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id436">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id437">Examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id438">Prioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id439">Deprioritisation Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id440">Related Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id441">Related Patterns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../patterns/">Pattern library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../meta/">Meta</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Open Data Services - Standards Lab Handbook</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../">Docs</a> &raquo;</li>
+        
+      <li>Component library</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/components/index.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="component-library">
+<h1>Component library<a class="headerlink" href="#component-library" title="Permalink to this headline">¶</a></h1>
+<p>On reviewing a range of policy-related data standards, including those that we maintain and those maintained by others, we identified approximately 60 components that at least two standards have chosen to create or adopt.</p>
+<p>Whether or not these are important to a particular standard depends on lots of factors, including but not limited to the maturity of the standard, whether the standard’s adoption is being driven co-operatively or adversarially, political factors and the character of the people and organisations in the domain where the standard operates.</p>
+<p>We conducted an exercise with representatives of several standards, asking them to conduct a diamond ranking exercise of the components. Diamond ranking was chosen to allow a ‘fat middle’ while forcing a decision on the highest and lowest priority items. Participants were asked to consider a standard at different levels of maturity, using Charles Handy’s Second Curve model for describing maturity.</p>
+<p>The list of components is below, with TODO: guidance as to what may make them more or less important for a particular standard.</p>
+<hr class="docutils" />
+<div class="section" id="components">
+<span id="component-advocacy-plan"></span><h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="advocacy-plan">
+<h3>Advocacy Plan<a class="headerlink" href="#advocacy-plan" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="summary">
+<h4>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h4>
+<p>Setting out steps to encourage organizations to adopt the standard.</p>
+</div>
+<div class="section" id="description">
+<h4>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h4>
+<p>An advocacy plan provides the resources and sets out the steps that will be followed to encourage organisations to adopt a standard, as well as key arguments. It should be updated regularly as the standard matures and as the standard starts to have an impact.</p>
+</div>
+<div class="section" id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="prioritisation-factors">
+<h4>Prioritisation Factors<a class="headerlink" href="#prioritisation-factors" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Where standards are being developed outside of the organisations that are expected to adopt the standard</li>
+<li>If there is a perceived cost to adopting a standard</li>
+</ul>
+</div>
+<div class="section" id="deprioritisation-factors">
+<h4>Deprioritisation Factors<a class="headerlink" href="#deprioritisation-factors" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Where a standard is emerging from consensus among the organisations that are expected to use it</li>
+</ul>
+</div>
+<div class="section" id="related-components">
+<h4>Related Components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="#component-blog"><span class="std std-ref">Blog</span></a></p>
+</div>
+<div class="section" id="related-patterns">
+<h4>Related Patterns<a class="headerlink" href="#related-patterns" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="blog">
+<span id="component-blog"></span><h3>Blog<a class="headerlink" href="#blog" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Summary<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Sharing stories of successful implementation.</p>
+</div>
+<div class="section" id="id2">
+<h4>Description<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>A blog that is regularly updated can provide updates to the community, resources for them to refer back to, and act as a 'shop window' for the standard, demonstrating that it is maintained and used.</p>
+</div>
+<div class="section" id="id3">
+<h4>Examples<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id4">
+<h4>Prioritisation Factors<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Where a wide audience is sought</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there isn't the resource available to make regular updates.</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h4>Related Components<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id7">
+<h4>Related Patterns<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="brand-agreements">
+<span id="component-brand-agreements"></span><h3>Brand Agreements<a class="headerlink" href="#brand-agreements" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h4>Summary<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>Setting out who is allowed to use the logo, and how implementers should describe their relationship to the standard.</p>
+</div>
+<div class="section" id="id9">
+<h4>Description<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>Standards that have developed a brand need to ensure that it is used in a way that benefits the community and the standard. This will likely include guidance as to when the logo can be used, how tools should describe themselves relative to the standard, and ensure that the brand is only used when relevant</p>
+</div>
+<div class="section" id="id10">
+<h4>Examples<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id11">
+<h4>Prioritisation Factors<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>When a standard is growing quickly</li>
+<li>There is a proliferation of tools and adopters, especially those who might use the name of the standard in their services.</li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Where there is a trusted community or less of a strong brand.</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h4>Related Components<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="#component-brand-guidance"><span class="std std-ref">Brand Guidance</span></a></p>
+</div>
+<div class="section" id="id14">
+<h4>Related Patterns<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="brand-guidance">
+<span id="component-brand-guidance"></span><h3>Brand Guidance<a class="headerlink" href="#brand-guidance" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h4>Summary<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<p>Describing how to use the logo and how to talk about the standard</p>
+</div>
+<div class="section" id="id16">
+<h4>Description<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p>Brand guidance sets out how to use the name, logo, look-and-feel and other identifying marks and conventions. The guidance helps a standard ensure that it isn't misrepresented, and that there is a clear distinction between the standard and those using it.</p>
+</div>
+<div class="section" id="id17">
+<h4>Examples<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id18">
+<h4>Prioritisation Factors<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard uses the name of a related concept in its own name</li>
+<li>During phases of rapid growth with a proliferation</li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard has not developed a strong brand</li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h4>Related Components<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id21">
+<h4>Related Patterns<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="case-studies">
+<span id="component-case-studies"></span><h3>Case Studies<a class="headerlink" href="#case-studies" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id22">
+<h4>Summary<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<p>Accessible write-ups exploring adoption and impact through narrative stories for a general audience.</p>
+</div>
+<div class="section" id="id23">
+<h4>Description<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<p>Case studies give real-world examples of when use of a standard has enabled a particular impact, while giving space for frank discussion of the challenges faced. This helps to set expectations among potential adopters and encourages those currently going through adoption of a standard to be reassured that encountering challenges isn't exceptional.</p>
+</div>
+<div class="section" id="id24">
+<h4>Examples<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id25">
+<h4>Prioritisation Factors<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Where a standard is more mature and at least one useful real example exists that can be described</li>
+<li>Where a strong advocacy is required to encourage adoption</li>
+<li>Where a standard's value proposition is concerned with impact beyond the use of the data - such as social outcomes</li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Where no real stories exist</li>
+<li>Where the community around a standard already share details with each other</li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h4>Related Components<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<p>Advocacy Plan</p>
+</div>
+<div class="section" id="id28">
+<h4>Related Patterns<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="communications-plan">
+<span id="component-communications-plan"></span><h3>Communications Plan<a class="headerlink" href="#communications-plan" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id29">
+<h4>Summary<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h4>
+<p>Setting out steps to get media coverage of the standard.</p>
+</div>
+<div class="section" id="id30">
+<h4>Description<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
+<p>A communications plan sets out the steps that are planned to encourage media coverage of the standard. Having a plan ensures that media opportunities are sought, and that representatives of the standard are well-equipped when taking advantage of opportunities. It can ensure that the standard is properly represented, setting expectations among potential users and beneficaries.</p>
+</div>
+<div class="section" id="id31">
+<h4>Examples<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id32">
+<h4>Prioritisation Factors<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard is likely to be of interest to either general or specific media outlets</li>
+<li>If a standard is intended to have an impact outside of its adopters</li>
+</ul>
+</div>
+<div class="section" id="id33">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id34">
+<h4>Related Components<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id35">
+<h4>Related Patterns<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="demonstration-applications">
+<span id="component-demonstration-applications"></span><h3>Demonstration Applications<a class="headerlink" href="#demonstration-applications" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id36">
+<h4>Summary<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h4>
+<p>Showcasing what can be done with data when it is published to a standard</p>
+</div>
+<div class="section" id="id37">
+<h4>Description<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
+<p>Demonstration applications are either real-world or contrived applications using standardised data to illustrate what the data could be used for. They can be used to demonstrate the advantages of using the standard at all, or using particular parts of the stardard.</p>
+</div>
+<div class="section" id="id38">
+<h4>Examples<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id39">
+<h4>Prioritisation Factors<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Where the value proposition of a standard is hard to articulate in words</li>
+</ul>
+</div>
+<div class="section" id="id40">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Early in a standard's development, as demonstration applications are likely to be costly to develop</li>
+<li>Where the community around a standard are developing applications as part of their adoption of the standard</li>
+</ul>
+</div>
+<div class="section" id="id41">
+<h4>Related Components<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id42">
+<h4>Related Patterns<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="discourse-forum">
+<span id="component-discourse-forum"></span><h3>Discourse Forum<a class="headerlink" href="#discourse-forum" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id43">
+<h4>Summary<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h4>
+<p>An online space for community discussion of the standard, adoption and data use.</p>
+</div>
+<div class="section" id="id44">
+<h4>Description<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h4>
+<p>An online space for community discussion of the standard, adoption and data use. By using a forum instead of other online communications mechanisms, a complete audit trail for decisions can be retained and referred to. Over time, forums can become a valuable resource for implementers, and provide rich content for support articles, FAQs and other resources.</p>
+</div>
+<div class="section" id="id45">
+<h4>Examples<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id46">
+<h4>Prioritisation Factors<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>When a standard has multiple stakeholders who don't meet regularly in person</li>
+<li>More mature standards</li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>When the community around a standard regularly meet in person</li>
+</ul>
+</div>
+<div class="section" id="id48">
+<h4>Related Components<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id49">
+<h4>Related Patterns<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="draft-commitments">
+<span id="component-draft-commitments"></span><h3>Draft Commitments<a class="headerlink" href="#draft-commitments" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id50">
+<h4>Summary<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
+<p>Asking potential adopters to sign-up and give their support to the standard.</p>
+</div>
+<div class="section" id="id51">
+<h4>Description<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
+<p>Draft commitments are templates for adopters to copy or adapt before signing and making public. By providing a draft, a standard can ensure that adopters are aware of what they are expected to commit to at the start of the process, and by providing a path of least resistance to a high bar of adoption, a standard organisation can ensure that there is less risk of implementers crafting their own, lower, commitment to adoption.</p>
+</div>
+<div class="section" id="id52">
+<h4>Examples<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id53">
+<h4>Prioritisation Factors<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard requires a relatively high level of commitment to be useful</li>
+<li>If a standard is targetting public sector organisations that are keen to formally launch commitments</li>
+<li>If a very early-stage standard requires commitment in principle before development begins</li>
+</ul>
+</div>
+<div class="section" id="id54">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id55">
+<h4>Related Components<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id56">
+<h4>Related Patterns<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="glossary">
+<span id="component-glossary"></span><h3>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id57">
+<h4>Summary<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h4>
+<p>Providing clear definitions for all the terms of art used in a standard.</p>
+</div>
+<div class="section" id="id58">
+<h4>Description<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h4>
+<p>A glossary provides an authoritative and unambiguous list of the terms and their definitions as used in a standard. The definitions may be different from some of those used by adopters, but ensure clarity when using the standard.</p>
+</div>
+<div class="section" id="id59">
+<h4>Examples<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id60">
+<h4>Prioritisation Factors<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard is to be localised or translated</li>
+</ul>
+</div>
+<div class="section" id="id61">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard relates to unambiguously defined terms in a sector</li>
+</ul>
+</div>
+<div class="section" id="id62">
+<h4>Related Components<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id63">
+<h4>Related Patterns<a class="headerlink" href="#id63" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="guidance-documentation">
+<span id="component-guidance-documentation"></span><h3>Guidance Documentation<a class="headerlink" href="#guidance-documentation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id64">
+<h4>Summary<a class="headerlink" href="#id64" title="Permalink to this headline">¶</a></h4>
+<p>Non-normative guidance on how to share data using the standard.</p>
+</div>
+<div class="section" id="id65">
+<h4>Description<a class="headerlink" href="#id65" title="Permalink to this headline">¶</a></h4>
+<p>Standards typically comprise a detailed, technical definition of how to publish data. They are often the product of extensive work and research, and are designed to be reference documentation. However, adoption requires adopters to be guided through the process of adoption - helped to understand how to start, where to focus effort, and how to understand concepts. Guidance documentation takes adopters through the process of using the standard, building on real-world experience.</p>
+</div>
+<div class="section" id="id66">
+<h4>Examples<a class="headerlink" href="#id66" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id67">
+<h4>Prioritisation Factors<a class="headerlink" href="#id67" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard is large</li>
+<li>If the standard uses a representation of concepts that may be unfamiliar to adopters</li>
+<li>If early adopters encountered issues or misunderstandings</li>
+</ul>
+</div>
+<div class="section" id="id68">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id68" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard is small, and implementation guidance can be included in the standard</li>
+</ul>
+</div>
+<div class="section" id="id69">
+<h4>Related Components<a class="headerlink" href="#id69" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id70">
+<h4>Related Patterns<a class="headerlink" href="#id70" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="icons">
+<span id="component-icons"></span><h3>Icons<a class="headerlink" href="#icons" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id71">
+<h4>Summary<a class="headerlink" href="#id71" title="Permalink to this headline">¶</a></h4>
+<p>Common visual elements used across documentation and presentations.</p>
+</div>
+<div class="section" id="id72">
+<h4>Description<a class="headerlink" href="#id72" title="Permalink to this headline">¶</a></h4>
+<p>Icons help with recall of key concepts, and consistency across a range of assets helps to build trust.</p>
+</div>
+<div class="section" id="id73">
+<h4>Examples<a class="headerlink" href="#id73" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id74">
+<h4>Prioritisation Factors<a class="headerlink" href="#id74" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard is being discussed across media (eg in print, online and in person)</li>
+<li>If the standard is being translated</li>
+<li>If the standard introduces concepts unfamiliar to typical adopters</li>
+<li>If the standard is being discussed across policy and technical boundaries</li>
+</ul>
+</div>
+<div class="section" id="id75">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id75" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard does not have a defined visual language</li>
+<li>If the standard only uses concepts that will be familiar to adopters</li>
+</ul>
+</div>
+<div class="section" id="id76">
+<h4>Related Components<a class="headerlink" href="#id76" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id77">
+<h4>Related Patterns<a class="headerlink" href="#id77" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="logo">
+<span id="component-logo"></span><h3>Logo<a class="headerlink" href="#logo" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id78">
+<h4>Summary<a class="headerlink" href="#id78" title="Permalink to this headline">¶</a></h4>
+<p>A logo for the standard</p>
+</div>
+<div class="section" id="id79">
+<h4>Description<a class="headerlink" href="#id79" title="Permalink to this headline">¶</a></h4>
+<p>A logo helps to reinforce the brand of the standard, gives a visual cue for recognition in resources, and can be used (with permission) by adoptors to demonstrate their use of the standard</p>
+</div>
+<div class="section" id="id80">
+<h4>Examples<a class="headerlink" href="#id80" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id81">
+<h4>Prioritisation Factors<a class="headerlink" href="#id81" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard will be used by a range of organisations</li>
+<li>If the standard is operating in an environment where it needs to be given legitimacy and authority</li>
+</ul>
+</div>
+<div class="section" id="id82">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id82" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard is emerging from a community and is mostly for the use of that community</li>
+</ul>
+</div>
+<div class="section" id="id83">
+<h4>Related Components<a class="headerlink" href="#id83" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id84">
+<h4>Related Patterns<a class="headerlink" href="#id84" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="principles">
+<span id="component-principles"></span><h3>Principles<a class="headerlink" href="#principles" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id85">
+<h4>Summary<a class="headerlink" href="#id85" title="Permalink to this headline">¶</a></h4>
+<p>Setting out high-level goals that adoption of the standard works towards.</p>
+</div>
+<div class="section" id="id86">
+<h4>Description<a class="headerlink" href="#id86" title="Permalink to this headline">¶</a></h4>
+<p>Principles help to focus work around a standard, provide encouragement for those working for the standard as to the purpose of their effort, and provide a 'litmus test' for proposals</p>
+</div>
+<div class="section" id="id87">
+<h4>Examples<a class="headerlink" href="#id87" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id88">
+<h4>Prioritisation Factors<a class="headerlink" href="#id88" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id89">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id89" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id90">
+<h4>Related Components<a class="headerlink" href="#id90" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id91">
+<h4>Related Patterns<a class="headerlink" href="#id91" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="progressive-enhancement-framework">
+<span id="component-progressive-enhancement-framework"></span><h3>Progressive Enhancement Framework<a class="headerlink" href="#progressive-enhancement-framework" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id92">
+<h4>Summary<a class="headerlink" href="#id92" title="Permalink to this headline">¶</a></h4>
+<p>Supporting publishers to start with unstructured documents, and move on to provide structured and ultimately linked data.</p>
+</div>
+<div class="section" id="id93">
+<h4>Description<a class="headerlink" href="#id93" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id94">
+<h4>Examples<a class="headerlink" href="#id94" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id95">
+<h4>Prioritisation Factors<a class="headerlink" href="#id95" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id96">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id96" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id97">
+<h4>Related Components<a class="headerlink" href="#id97" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id98">
+<h4>Related Patterns<a class="headerlink" href="#id98" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="publication-levels">
+<span id="component-publication-levels"></span><h3>Publication Levels<a class="headerlink" href="#publication-levels" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id99">
+<h4>Summary<a class="headerlink" href="#id99" title="Permalink to this headline">¶</a></h4>
+<p>Separating fields into 'basic', 'intermediate' and 'advanced' so that publishers can focus on a small set first.</p>
+</div>
+<div class="section" id="id100">
+<h4>Description<a class="headerlink" href="#id100" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id101">
+<h4>Examples<a class="headerlink" href="#id101" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id102">
+<h4>Prioritisation Factors<a class="headerlink" href="#id102" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id103">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id103" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id104">
+<h4>Related Components<a class="headerlink" href="#id104" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id105">
+<h4>Related Patterns<a class="headerlink" href="#id105" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="publisher-ranking">
+<span id="component-publisher-ranking"></span><h3>Publisher Ranking<a class="headerlink" href="#publisher-ranking" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id106">
+<h4>Summary<a class="headerlink" href="#id106" title="Permalink to this headline">¶</a></h4>
+<p>E.g. an annual report ranking datasets and their publishers based on an agreed methodology.</p>
+</div>
+<div class="section" id="id107">
+<h4>Description<a class="headerlink" href="#id107" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id108">
+<h4>Examples<a class="headerlink" href="#id108" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id109">
+<h4>Prioritisation Factors<a class="headerlink" href="#id109" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id110">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id110" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id111">
+<h4>Related Components<a class="headerlink" href="#id111" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id112">
+<h4>Related Patterns<a class="headerlink" href="#id112" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="recommended-data-license">
+<span id="component-recommended-data-license"></span><h3>Recommended Data License<a class="headerlink" href="#recommended-data-license" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id113">
+<h4>Summary<a class="headerlink" href="#id113" title="Permalink to this headline">¶</a></h4>
+<p>E.g. the requirement that publishers should use Creative Commons or Open Database License.</p>
+</div>
+<div class="section" id="id114">
+<h4>Description<a class="headerlink" href="#id114" title="Permalink to this headline">¶</a></h4>
+<p>A recommended license can help to ensure that adopters give due consideration to licensing, as well as setting a high bar for adopters and encouraging intertia among the community using the standard.</p>
+</div>
+<div class="section" id="id115">
+<h4>Examples<a class="headerlink" href="#id115" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id116">
+<h4>Prioritisation Factors<a class="headerlink" href="#id116" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If adopters are unlikely to consider licensing as part of their adoption process</li>
+<li>If adopters are likely to have concerns over how their data can be used</li>
+</ul>
+</div>
+<div class="section" id="id117">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id117" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the data that the standard relates to is already governed by a license restriction</li>
+</ul>
+</div>
+<div class="section" id="id118">
+<h4>Related Components<a class="headerlink" href="#id118" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id119">
+<h4>Related Patterns<a class="headerlink" href="#id119" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="tutorial-videos">
+<span id="component-tutorial-videos"></span><h3>Tutorial Videos<a class="headerlink" href="#tutorial-videos" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id120">
+<h4>Summary<a class="headerlink" href="#id120" title="Permalink to this headline">¶</a></h4>
+<p>Providing on-demand overview of how the use the standard.</p>
+</div>
+<div class="section" id="id121">
+<h4>Description<a class="headerlink" href="#id121" title="Permalink to this headline">¶</a></h4>
+<p>Videos provide the opportunity to deliver a path through learning materials that are available on-demand.</p>
+</div>
+<div class="section" id="id122">
+<h4>Examples<a class="headerlink" href="#id122" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id123">
+<h4>Prioritisation Factors<a class="headerlink" href="#id123" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If resources around the standard are unlikely to change dramatically</li>
+<li>If adopters find it hard to learn how to do certain things with the standard on account of resources being spread out</li>
+</ul>
+</div>
+<div class="section" id="id124">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id124" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard and related resources are rapidly evolving</li>
+</ul>
+</div>
+<div class="section" id="id125">
+<h4>Related Components<a class="headerlink" href="#id125" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id126">
+<h4>Related Patterns<a class="headerlink" href="#id126" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="microblogging">
+<span id="component-microblogging"></span><h3>Microblogging<a class="headerlink" href="#microblogging" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id127">
+<h4>Summary<a class="headerlink" href="#id127" title="Permalink to this headline">¶</a></h4>
+<p>Twitter (or similar) For communicating with the public.</p>
+</div>
+<div class="section" id="id128">
+<h4>Description<a class="headerlink" href="#id128" title="Permalink to this headline">¶</a></h4>
+<p>Public microblogging services such as Twitter, Tumblr and Instagram allow a standard to communicate little and often, and to engage with their communities in a relateable way. Some open communities already have a strong presence on microblogging sites, so the friction for engagement is reduced.</p>
+</div>
+<div class="section" id="id129">
+<h4>Examples<a class="headerlink" href="#id129" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id130">
+<h4>Prioritisation Factors<a class="headerlink" href="#id130" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there is a community of potential adopters who already use a particular microblogging service</li>
+</ul>
+</div>
+<div class="section" id="id131">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id131" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the time, people or infrastructure required to make regular updates is not available</li>
+</ul>
+</div>
+<div class="section" id="id132">
+<h4>Related Components<a class="headerlink" href="#id132" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id133">
+<h4>Related Patterns<a class="headerlink" href="#id133" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="website">
+<span id="component-website"></span><h3>Website<a class="headerlink" href="#website" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id134">
+<h4>Summary<a class="headerlink" href="#id134" title="Permalink to this headline">¶</a></h4>
+<p>A shop-window on the standard, setting in context of wider goals</p>
+</div>
+<div class="section" id="id135">
+<h4>Description<a class="headerlink" href="#id135" title="Permalink to this headline">¶</a></h4>
+<p>A standard's website brings together the various component of a standard, giving a single place where the standard can be explained to different audiences, and will act as a place that adopters go to in order to discover resources.</p>
+</div>
+<div class="section" id="id136">
+<h4>Examples<a class="headerlink" href="#id136" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id137">
+<h4>Prioritisation Factors<a class="headerlink" href="#id137" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there are multiple resources relating to a standard</li>
+<li>If a standard is intended to be used by a wider community than those instigating it</li>
+</ul>
+</div>
+<div class="section" id="id138">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id138" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard is intended to only be used for a particular community who are involved in creating it</li>
+<li>If a standard is part of a wider operation that has its own web presence</li>
+</ul>
+</div>
+<div class="section" id="id139">
+<h4>Related Components<a class="headerlink" href="#id139" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id140">
+<h4>Related Patterns<a class="headerlink" href="#id140" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="api-specification">
+<span id="component-api-specification"></span><h3>API Specification<a class="headerlink" href="#api-specification" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id141">
+<h4>Summary<a class="headerlink" href="#id141" title="Permalink to this headline">¶</a></h4>
+<p>Describing how data should be accessed interactively.</p>
+</div>
+<div class="section" id="id142">
+<h4>Description<a class="headerlink" href="#id142" title="Permalink to this headline">¶</a></h4>
+<p>APIs allow developers to access data stored elsewhere without needing to obtain and process the whole data set themselves. This lowers the barriers to creating applications that use the data, and encourages use. An API specification sets out a standard way for API developers to present interfaces to the data, meaning that consuming applications are more portable between publishers and removing the design cost for any adopter wishing to publish via an API</p>
+</div>
+<div class="section" id="id143">
+<h4>Examples<a class="headerlink" href="#id143" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id144">
+<h4>Prioritisation Factors<a class="headerlink" href="#id144" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If applications may be portable between data providers using the standard</li>
+<li>If an adopter is considering building an API</li>
+</ul>
+</div>
+<div class="section" id="id145">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id145" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Early stage standards</li>
+<li>If there is no consideration of APIs</li>
+<li>If applications are unlikely to be portable between data providers</li>
+</ul>
+</div>
+<div class="section" id="id146">
+<h4>Related Components<a class="headerlink" href="#id146" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id147">
+<h4>Related Patterns<a class="headerlink" href="#id147" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="codelists">
+<span id="component-codelists"></span><h3>Codelists<a class="headerlink" href="#codelists" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id148">
+<h4>Summary<a class="headerlink" href="#id148" title="Permalink to this headline">¶</a></h4>
+<p>Classifications used in the standard</p>
+</div>
+<div class="section" id="id149">
+<h4>Description<a class="headerlink" href="#id149" title="Permalink to this headline">¶</a></h4>
+<p>Codelists are lists of terms that are provided as part of a standard in order to ensure that values of fields where there are a limited range of options are properly limited in the data, and that concepts map correctly between datasets. For example, a codelist might specify currency codes, to avoid US Dollars being referred to as &quot;$&quot; in one data set and &quot;USD&quot; in another. Codelists can be open or closed - open codelists allow values to be added, while closed codelists do not permit additions</p>
+</div>
+<div class="section" id="id150">
+<h4>Examples<a class="headerlink" href="#id150" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id151">
+<h4>Prioritisation Factors<a class="headerlink" href="#id151" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there are currencies, languages or other commonly enumerated concepts in the standard</li>
+<li>If there are data elements that would be rendered as 'pick one from the list' in a form</li>
+</ul>
+</div>
+<div class="section" id="id152">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id152" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id153">
+<h4>Related Components<a class="headerlink" href="#id153" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id154">
+<h4>Related Patterns<a class="headerlink" href="#id154" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="contributor-guidelines">
+<span id="component-contributor-guidelines"></span><h3>Contributor Guidelines<a class="headerlink" href="#contributor-guidelines" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id155">
+<h4>Summary<a class="headerlink" href="#id155" title="Permalink to this headline">¶</a></h4>
+<p>Describing the practices and workflows for contributing to the standard or associated documentation.</p>
+</div>
+<div class="section" id="id156">
+<h4>Description<a class="headerlink" href="#id156" title="Permalink to this headline">¶</a></h4>
+<p>Contributor guidelines set out the expectations of external contributions to the standard or the tools that are provided to support adopters. They typically cover licensing, procedure for contributions to be reviewed, acknowledgement, and expectations around process. Contributions may include comments in forum threads or in emails as well as formal written contributions.</p>
+</div>
+<div class="section" id="id157">
+<h4>Examples<a class="headerlink" href="#id157" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id158">
+<h4>Prioritisation Factors<a class="headerlink" href="#id158" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there are individuals or organisations who are keen to contribute directly to the standard or tools</li>
+<li>If the standard is starting to draw extensively on the ideas and work of the community to develop</li>
+</ul>
+</div>
+<div class="section" id="id159">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id159" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard is being developed entirely by the organisation that maintains it with little external input</li>
+</ul>
+</div>
+<div class="section" id="id160">
+<h4>Related Components<a class="headerlink" href="#id160" title="Permalink to this headline">¶</a></h4>
+<p>Developer Guidelines</p>
+</div>
+<div class="section" id="id161">
+<h4>Related Patterns<a class="headerlink" href="#id161" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="developer-guidelines">
+<span id="component-developer-guidelines"></span><h3>Developer Guidelines<a class="headerlink" href="#developer-guidelines" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id162">
+<h4>Summary<a class="headerlink" href="#id162" title="Permalink to this headline">¶</a></h4>
+<p>Describing the coding practices and workflows for contributing to the standard or associated tools.</p>
+</div>
+<div class="section" id="id163">
+<h4>Description<a class="headerlink" href="#id163" title="Permalink to this headline">¶</a></h4>
+<p>Developer guidelines set out the expectactions of external contributions to the standard or the tools that are provided to support adopters. They typically cover licensing, procedure for contributions to be reviewed, expectations around process, and technical expectations such as comments, naming conventions, tests and coding style.</p>
+</div>
+<div class="section" id="id164">
+<h4>Examples<a class="headerlink" href="#id164" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id165">
+<h4>Prioritisation Factors<a class="headerlink" href="#id165" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there are individuals or organisations who are keen to contribute directly to the standard or tools</li>
+</ul>
+</div>
+<div class="section" id="id166">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id166" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id167">
+<h4>Related Components<a class="headerlink" href="#id167" title="Permalink to this headline">¶</a></h4>
+<p>Contributor Guidelines</p>
+</div>
+<div class="section" id="id168">
+<h4>Related Patterns<a class="headerlink" href="#id168" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="contributors-agreement">
+<span id="component-contributors-agreement"></span><h3>Contributors Agreement<a class="headerlink" href="#contributors-agreement" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id169">
+<h4>Summary<a class="headerlink" href="#id169" title="Permalink to this headline">¶</a></h4>
+<p>Used to make sure all contributions to the standard are appropriately licensed, and to manage patent risks.</p>
+</div>
+<div class="section" id="id170">
+<h4>Description<a class="headerlink" href="#id170" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id171">
+<h4>Examples<a class="headerlink" href="#id171" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id172">
+<h4>Prioritisation Factors<a class="headerlink" href="#id172" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id173">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id173" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id174">
+<h4>Related Components<a class="headerlink" href="#id174" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id175">
+<h4>Related Patterns<a class="headerlink" href="#id175" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="conversion-tools">
+<span id="component-conversion-tools"></span><h3>Conversion Tools<a class="headerlink" href="#conversion-tools" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id176">
+<h4>Summary<a class="headerlink" href="#id176" title="Permalink to this headline">¶</a></h4>
+<p>Allowing conversion between serialization formats (e.g. CSV -&gt; XML; JSON -&gt; XLS)</p>
+</div>
+<div class="section" id="id177">
+<h4>Description<a class="headerlink" href="#id177" title="Permalink to this headline">¶</a></h4>
+<p>Data standards often use structured data formats such as JSON or XML to give more flexbility in modelling and to allow validation against schema. Typically, developers prefer to work with structured data formats as they are easier to work with in programs. However, JSON and XML aren't very human-friendly, and people working with data in many domains prefer to use flat representations of data such as CSV and XLSX spreadsheets, both for publishing and manipulating data. Conversion tools allow conversion between the formats, to allow the standard and developers to retain the benfits of a structured data format and users to continue to be able to engage with the data in a way that they're comfortable with.</p>
+</div>
+<div class="section" id="id178">
+<h4>Examples<a class="headerlink" href="#id178" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id179">
+<h4>Prioritisation Factors<a class="headerlink" href="#id179" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard uses a structured data format, while data publishers and/or users prefer flat representations.</li>
+</ul>
+</div>
+<div class="section" id="id180">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id180" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard uses a data format that is the same as both publishers and users prefer to use</li>
+</ul>
+</div>
+<div class="section" id="id181">
+<h4>Related Components<a class="headerlink" href="#id181" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id182">
+<h4>Related Patterns<a class="headerlink" href="#id182" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="email-list">
+<span id="component-email-list"></span><h3>Email List<a class="headerlink" href="#email-list" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id183">
+<h4>Summary<a class="headerlink" href="#id183" title="Permalink to this headline">¶</a></h4>
+<p>Used to discuss the standard, or announce standard updates.</p>
+</div>
+<div class="section" id="id184">
+<h4>Description<a class="headerlink" href="#id184" title="Permalink to this headline">¶</a></h4>
+<p>Email lists are a widely-accessible and low-cost way for a group to hold discussions, and many email list providers offer a public archive service so that accountability is maintained. Standards often have a discussion list and a separate announcement list, so that members can choose how involved they want to be. The asynchronous nature of email lists allows users to be involved as regularly or infrequently as they prefer. However, some users are reticent to post to public email lists for fear of appearing foolish or having their words during their learning being recorded.</p>
+</div>
+<div class="section" id="id185">
+<h4>Examples<a class="headerlink" href="#id185" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id186">
+<h4>Prioritisation Factors<a class="headerlink" href="#id186" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>In the early stages of a standard</li>
+<li>If a public archive of discussions is important</li>
+<li>If key people in the development of the standard are comfortable with public email lists</li>
+</ul>
+</div>
+<div class="section" id="id187">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id187" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there is reticence among users about public email lists</li>
+</ul>
+</div>
+<div class="section" id="id188">
+<h4>Related Components<a class="headerlink" href="#id188" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id189">
+<h4>Related Patterns<a class="headerlink" href="#id189" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="data-aggregator">
+<span id="component-data-aggregator"></span><h3>Data Aggregator<a class="headerlink" href="#data-aggregator" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id190">
+<h4>Summary<a class="headerlink" href="#id190" title="Permalink to this headline">¶</a></h4>
+<p>Providing access to all the data shared using the standard.</p>
+</div>
+<div class="section" id="id191">
+<h4>Description<a class="headerlink" href="#id191" title="Permalink to this headline">¶</a></h4>
+<p>Many standards consider one of the best arguments for standardisation is being able to give examples of applications that become possible when the entire data set can be taken as a whole. A data aggregator brings together some or all of the data being published to the standard and enables users to obtain it as a single data set, removing the first barrier to application development on top of the data set, and encouraging experimentation.</p>
+</div>
+<div class="section" id="id192">
+<h4>Examples<a class="headerlink" href="#id192" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id193">
+<h4>Prioritisation Factors<a class="headerlink" href="#id193" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If enough sources of standardised data exist to be usefully aggregated</li>
+<li>If having access to the whole data set is meaningful</li>
+</ul>
+</div>
+<div class="section" id="id194">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id194" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the data cannot meaningfully be considered as a whole</li>
+<li>If there are few data sources available, or their use of the standard is divergent enough as to make the data incomparable</li>
+</ul>
+</div>
+<div class="section" id="id195">
+<h4>Related Components<a class="headerlink" href="#id195" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id196">
+<h4>Related Patterns<a class="headerlink" href="#id196" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="example-data">
+<span id="component-example-data"></span><h3>Example Data<a class="headerlink" href="#example-data" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id197">
+<h4>Summary<a class="headerlink" href="#id197" title="Permalink to this headline">¶</a></h4>
+<p>Auto-generated and manually created examples used in tutorials, and for testing the standard.</p>
+</div>
+<div class="section" id="id198">
+<h4>Description<a class="headerlink" href="#id198" title="Permalink to this headline">¶</a></h4>
+<p>Adopters of the standard and users of the data are often helped by seeing examples of what the data could look like. Example data can often give hints that might be missed by reading documentation, and can be used to set expectations of what data should look like.</p>
+</div>
+<div class="section" id="id199">
+<h4>Examples<a class="headerlink" href="#id199" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id200">
+<h4>Prioritisation Factors<a class="headerlink" href="#id200" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard is large or complicated</li>
+<li>If adopters or users are often misunderstanding the requirements of the standard or strugging to 'get it'</li>
+</ul>
+</div>
+<div class="section" id="id201">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id201" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If the standard is intentionally loose</li>
+<li>If the standard is rapidly changing</li>
+<li>If the standard does not have schema or a field model</li>
+</ul>
+</div>
+<div class="section" id="id202">
+<h4>Related Components<a class="headerlink" href="#id202" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id203">
+<h4>Related Patterns<a class="headerlink" href="#id203" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="faqs">
+<span id="component-faqs"></span><h3>FAQs<a class="headerlink" href="#faqs" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id204">
+<h4>Summary<a class="headerlink" href="#id204" title="Permalink to this headline">¶</a></h4>
+<p>Addressing frequently asked questions from publishers and users.</p>
+</div>
+<div class="section" id="id205">
+<h4>Description<a class="headerlink" href="#id205" title="Permalink to this headline">¶</a></h4>
+<p>FAQs cover common issues and questions that are asked, and can be used to shape implementers' thinking very early in their process, addressing misconceptions before too much work happens. They can also be a useful reference resource - common solutions to regular issues can be recorded in a single place.</p>
+</div>
+<div class="section" id="id206">
+<h4>Examples<a class="headerlink" href="#id206" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id207">
+<h4>Prioritisation Factors<a class="headerlink" href="#id207" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard helpdesk has sufficient traffic to be able to identify common issues</li>
+</ul>
+</div>
+<div class="section" id="id208">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id208" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If a standard wants to ensure that they are in contact with all implementers from an early stage</li>
+</ul>
+</div>
+<div class="section" id="id209">
+<h4>Related Components<a class="headerlink" href="#id209" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id210">
+<h4>Related Patterns<a class="headerlink" href="#id210" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="field-level-mapping-template">
+<span id="component-field-level-mapping-template"></span><h3>Field-level Mapping Template<a class="headerlink" href="#field-level-mapping-template" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id211">
+<h4>Summary<a class="headerlink" href="#id211" title="Permalink to this headline">¶</a></h4>
+<p>Used when preparing to publish data to cross-walk from existing systems.</p>
+</div>
+<div class="section" id="id212">
+<h4>Description<a class="headerlink" href="#id212" title="Permalink to this headline">¶</a></h4>
+<p>Field-level mapping is a crucial stage in preparing to publish existing data to a standard. A template gives some structure to the activity, can be shared between colleagues, and gives an opportunity for a standard to provide helpful advice in context.</p>
+</div>
+<div class="section" id="id213">
+<h4>Examples<a class="headerlink" href="#id213" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id214">
+<h4>Prioritisation Factors<a class="headerlink" href="#id214" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If publishers are extracting data from existing systems to publish using the standard</li>
+</ul>
+</div>
+<div class="section" id="id215">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id215" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id216">
+<h4>Related Components<a class="headerlink" href="#id216" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id217">
+<h4>Related Patterns<a class="headerlink" href="#id217" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="getting-started-documentation">
+<span id="component-getting-started-documentation"></span><h3>Getting Started Documentation<a class="headerlink" href="#getting-started-documentation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id218">
+<h4>Summary<a class="headerlink" href="#id218" title="Permalink to this headline">¶</a></h4>
+<p>User-friendly and filled with examples.</p>
+</div>
+<div class="section" id="id219">
+<h4>Description<a class="headerlink" href="#id219" title="Permalink to this headline">¶</a></h4>
+<p>The normative documentation for standards is technical, prescise, authoratitive and comprehensive. While this is useful for a reference, the process of learning about a new standard is helped by the same kind of learning resources as any other learning process, including worked examples, guided learning through the standard, and practice materials.</p>
+</div>
+<div class="section" id="id220">
+<h4>Examples<a class="headerlink" href="#id220" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id221">
+<h4>Prioritisation Factors<a class="headerlink" href="#id221" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If people who weren't involved in designing the standard are involved in implementation</li>
+</ul>
+</div>
+<div class="section" id="id222">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id222" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id223">
+<h4>Related Components<a class="headerlink" href="#id223" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id224">
+<h4>Related Patterns<a class="headerlink" href="#id224" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="issue-tracker">
+<span id="component-issue-tracker"></span><h3>Issue Tracker<a class="headerlink" href="#issue-tracker" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id225">
+<h4>Summary<a class="headerlink" href="#id225" title="Permalink to this headline">¶</a></h4>
+<p>Providing clear public trail for all discussions about changes to the standard.</p>
+</div>
+<div class="section" id="id226">
+<h4>Description<a class="headerlink" href="#id226" title="Permalink to this headline">¶</a></h4>
+<p>Discussions around changes to data standards and suggestions for improvements often happen in different places - in technical and policy forums, in person, in private chats and elsewhere. An issue tracker provides a single place where such discussions are recorded, and discussion can advance. Later, an issue tracker allows the community to see the rationale behind a decision, allowing discussion to pick up if a change is desired.</p>
+</div>
+<div class="section" id="id227">
+<h4>Examples<a class="headerlink" href="#id227" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id228">
+<h4>Prioritisation Factors<a class="headerlink" href="#id228" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If discussions around the standard are happening in multiple places</li>
+</ul>
+</div>
+<div class="section" id="id229">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id229" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id230">
+<h4>Related Components<a class="headerlink" href="#id230" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id231">
+<h4>Related Patterns<a class="headerlink" href="#id231" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="helpdesk-email-address">
+<span id="component-helpdesk-email-address"></span><h3>Helpdesk Email Address<a class="headerlink" href="#helpdesk-email-address" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id232">
+<h4>Summary<a class="headerlink" href="#id232" title="Permalink to this headline">¶</a></h4>
+<p>Providing a place to ask implementation questions.</p>
+</div>
+<div class="section" id="id233">
+<h4>Description<a class="headerlink" href="#id233" title="Permalink to this headline">¶</a></h4>
+<p>A helpdesk email address provides an accessible, on-demand, asynchronous way for questions about the standard to be answered. They may go to a single person, or a team may share an inbox and prioritise work accordingly.</p>
+</div>
+<div class="section" id="id234">
+<h4>Examples<a class="headerlink" href="#id234" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id235">
+<h4>Prioritisation Factors<a class="headerlink" href="#id235" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there are implementers who aren't already part of the network creating the standard</li>
+</ul>
+</div>
+<div class="section" id="id236">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id236" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id237">
+<h4>Related Components<a class="headerlink" href="#id237" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id238">
+<h4>Related Patterns<a class="headerlink" href="#id238" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="helpdesk-phone-number">
+<span id="component-helpdesk-phone-number"></span><h3>Helpdesk Phone Number<a class="headerlink" href="#helpdesk-phone-number" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id239">
+<h4>Summary<a class="headerlink" href="#id239" title="Permalink to this headline">¶</a></h4>
+<p>Direct access to talk to someone about adopting the standard.</p>
+</div>
+<div class="section" id="id240">
+<h4>Description<a class="headerlink" href="#id240" title="Permalink to this headline">¶</a></h4>
+<p>A direct phone number provides rapid access to implementation support, and can help to build relationships between implementers and those maintaining the standard. It can encourage little-and-often access to support, which may help implementers avoid early misunderstandings. However, many implementation issues require sharing of data or in-depth investigation, which can't be easily carried out over the phone.</p>
+</div>
+<div class="section" id="id241">
+<h4>Examples<a class="headerlink" href="#id241" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id242">
+<h4>Prioritisation Factors<a class="headerlink" href="#id242" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If implementation questions can easily be answered over the phone</li>
+</ul>
+</div>
+<div class="section" id="id243">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id243" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there aren't sufficient staff or volunteers to offer the level of cover expected</li>
+</ul>
+</div>
+<div class="section" id="id244">
+<h4>Related Components<a class="headerlink" href="#id244" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id245">
+<h4>Related Patterns<a class="headerlink" href="#id245" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="implementation-plan-template">
+<span id="component-implementation-plan-template"></span><h3>Implementation Plan Template<a class="headerlink" href="#implementation-plan-template" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id246">
+<h4>Summary<a class="headerlink" href="#id246" title="Permalink to this headline">¶</a></h4>
+<p>To be filled in by someone planning to adopt the standard.</p>
+</div>
+<div class="section" id="id247">
+<h4>Description<a class="headerlink" href="#id247" title="Permalink to this headline">¶</a></h4>
+<p>The Implementation Plan Template provides an overview of the planning required for an implementation - the stages to go through, the factors to consider, the preparation required, and the path to implementation. Having a plan provides confidence of success for implementers and stakeholders, and helps the standard to provide support proactively instead of just responding to questions.</p>
+</div>
+<div class="section" id="id248">
+<h4>Examples<a class="headerlink" href="#id248" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id249">
+<h4>Prioritisation Factors<a class="headerlink" href="#id249" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If implementing the standard requires multiple stakeholders</li>
+</ul>
+</div>
+<div class="section" id="id250">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id250" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id251">
+<h4>Related Components<a class="headerlink" href="#id251" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id252">
+<h4>Related Patterns<a class="headerlink" href="#id252" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="maintenance-handbook">
+<span id="component-maintenance-handbook"></span><h3>Maintenance Handbook<a class="headerlink" href="#maintenance-handbook" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id253">
+<h4>Summary<a class="headerlink" href="#id253" title="Permalink to this headline">¶</a></h4>
+<p>For the team maintaining and updating the standard.</p>
+</div>
+<div class="section" id="id254">
+<h4>Description<a class="headerlink" href="#id254" title="Permalink to this headline">¶</a></h4>
+<p>The maintenance handbook provides a place for the team developing and maintaining the standard itself, to record decisions and best practices, to store solutions to common problems, and to hand over as people leave and join the team. It can be used to encourage wider contribution to the maintenance, by ensuring that even occasional contributors understand the practices of the standard.</p>
+</div>
+<div class="section" id="id255">
+<h4>Examples<a class="headerlink" href="#id255" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id256">
+<h4>Prioritisation Factors<a class="headerlink" href="#id256" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there are multiple people developing the standard</li>
+</ul>
+</div>
+<div class="section" id="id257">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id257" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id258">
+<h4>Related Components<a class="headerlink" href="#id258" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id259">
+<h4>Related Patterns<a class="headerlink" href="#id259" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="online-validator">
+<span id="component-online-validator"></span><h3>Online Validator<a class="headerlink" href="#online-validator" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id260">
+<h4>Summary<a class="headerlink" href="#id260" title="Permalink to this headline">¶</a></h4>
+<p>Providing a report on technical validity of data against the schema.</p>
+</div>
+<div class="section" id="id261">
+<h4>Description<a class="headerlink" href="#id261" title="Permalink to this headline">¶</a></h4>
+<p>Part of a standard is often schema, and reporting on technical validity against the schema is a way of programmatically checking that the data conforms to the schema and can be used by other tools that expect data to conform to the schema. By providing validation as an online service, implementers can validate their data without</p>
+</div>
+<div class="section" id="id262">
+<h4>Examples<a class="headerlink" href="#id262" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id263">
+<h4>Prioritisation Factors<a class="headerlink" href="#id263" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If there</li>
+</ul>
+</div>
+<div class="section" id="id264">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id264" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id265">
+<h4>Related Components<a class="headerlink" href="#id265" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id266">
+<h4>Related Patterns<a class="headerlink" href="#id266" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="quality-tool">
+<span id="component-quality-tool"></span><h3>Quality Tool<a class="headerlink" href="#quality-tool" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id267">
+<h4>Summary<a class="headerlink" href="#id267" title="Permalink to this headline">¶</a></h4>
+<p>Providing feedback on the content of datasets, based on a set of data quality rules.</p>
+</div>
+<div class="section" id="id268">
+<h4>Description<a class="headerlink" href="#id268" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id269">
+<h4>Examples<a class="headerlink" href="#id269" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id270">
+<h4>Prioritisation Factors<a class="headerlink" href="#id270" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id271">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id271" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id272">
+<h4>Related Components<a class="headerlink" href="#id272" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id273">
+<h4>Related Patterns<a class="headerlink" href="#id273" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="recommended-fields">
+<span id="component-recommended-fields"></span><h3>Recommended Fields<a class="headerlink" href="#recommended-fields" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id274">
+<h4>Summary<a class="headerlink" href="#id274" title="Permalink to this headline">¶</a></h4>
+<p>A list of fields that publishers are encouraged (but not required) to provide</p>
+</div>
+<div class="section" id="id275">
+<h4>Description<a class="headerlink" href="#id275" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id276">
+<h4>Examples<a class="headerlink" href="#id276" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id277">
+<h4>Prioritisation Factors<a class="headerlink" href="#id277" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id278">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id278" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id279">
+<h4>Related Components<a class="headerlink" href="#id279" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id280">
+<h4>Related Patterns<a class="headerlink" href="#id280" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="reference-documentation">
+<span id="component-reference-documentation"></span><h3>Reference Documentation<a class="headerlink" href="#reference-documentation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id281">
+<h4>Summary<a class="headerlink" href="#id281" title="Permalink to this headline">¶</a></h4>
+<p>Normative. Describing all the elements of the standard, and used as the basis for any judging correct or incorrect implementations.</p>
+</div>
+<div class="section" id="id282">
+<h4>Description<a class="headerlink" href="#id282" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id283">
+<h4>Examples<a class="headerlink" href="#id283" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id284">
+<h4>Prioritisation Factors<a class="headerlink" href="#id284" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id285">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id285" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id286">
+<h4>Related Components<a class="headerlink" href="#id286" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id287">
+<h4>Related Patterns<a class="headerlink" href="#id287" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="reference-lists">
+<span id="component-reference-lists"></span><h3>Reference Lists<a class="headerlink" href="#reference-lists" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id288">
+<h4>Summary<a class="headerlink" href="#id288" title="Permalink to this headline">¶</a></h4>
+<p>Lookup lists for key concepts (e.g. organization registers).</p>
+</div>
+<div class="section" id="id289">
+<h4>Description<a class="headerlink" href="#id289" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id290">
+<h4>Examples<a class="headerlink" href="#id290" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id291">
+<h4>Prioritisation Factors<a class="headerlink" href="#id291" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id292">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id292" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id293">
+<h4>Related Components<a class="headerlink" href="#id293" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id294">
+<h4>Related Patterns<a class="headerlink" href="#id294" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="registry-of-datasets">
+<span id="component-registry-of-datasets"></span><h3>Registry Of Datasets<a class="headerlink" href="#registry-of-datasets" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id295">
+<h4>Summary<a class="headerlink" href="#id295" title="Permalink to this headline">¶</a></h4>
+<p>Providing links to all known data that follows the standard.</p>
+</div>
+<div class="section" id="id296">
+<h4>Description<a class="headerlink" href="#id296" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id297">
+<h4>Examples<a class="headerlink" href="#id297" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id298">
+<h4>Prioritisation Factors<a class="headerlink" href="#id298" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id299">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id299" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id300">
+<h4>Related Components<a class="headerlink" href="#id300" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id301">
+<h4>Related Patterns<a class="headerlink" href="#id301" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="required-fields">
+<span id="component-required-fieds"></span><h3>Required Fields<a class="headerlink" href="#required-fields" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id302">
+<h4>Summary<a class="headerlink" href="#id302" title="Permalink to this headline">¶</a></h4>
+<p>A list of fields that MUST be provided.</p>
+</div>
+<div class="section" id="id303">
+<h4>Description<a class="headerlink" href="#id303" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id304">
+<h4>Examples<a class="headerlink" href="#id304" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id305">
+<h4>Prioritisation Factors<a class="headerlink" href="#id305" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id306">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id306" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id307">
+<h4>Related Components<a class="headerlink" href="#id307" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id308">
+<h4>Related Patterns<a class="headerlink" href="#id308" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="research-report">
+<span id="component-research-report"></span><h3>Research Report<a class="headerlink" href="#research-report" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id309">
+<h4>Summary<a class="headerlink" href="#id309" title="Permalink to this headline">¶</a></h4>
+<p>Independent evidence concerning data publication and use.</p>
+</div>
+<div class="section" id="id310">
+<h4>Description<a class="headerlink" href="#id310" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id311">
+<h4>Examples<a class="headerlink" href="#id311" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id312">
+<h4>Prioritisation Factors<a class="headerlink" href="#id312" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id313">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id313" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id314">
+<h4>Related Components<a class="headerlink" href="#id314" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id315">
+<h4>Related Patterns<a class="headerlink" href="#id315" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="rules-for-additional-checks">
+<span id="component-rules-for-additional-checks"></span><h3>Rules For Additional Checks<a class="headerlink" href="#rules-for-additional-checks" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id316">
+<h4>Summary<a class="headerlink" href="#id316" title="Permalink to this headline">¶</a></h4>
+<p>Machine and human-readable rules used to check data quality.</p>
+</div>
+<div class="section" id="id317">
+<h4>Description<a class="headerlink" href="#id317" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id318">
+<h4>Examples<a class="headerlink" href="#id318" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id319">
+<h4>Prioritisation Factors<a class="headerlink" href="#id319" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id320">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id320" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id321">
+<h4>Related Components<a class="headerlink" href="#id321" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id322">
+<h4>Related Patterns<a class="headerlink" href="#id322" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="schema">
+<span id="component-schema"></span><h3>Schema<a class="headerlink" href="#schema" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id323">
+<h4>Summary<a class="headerlink" href="#id323" title="Permalink to this headline">¶</a></h4>
+<p>The technical description of how data should be structured.</p>
+</div>
+<div class="section" id="id324">
+<h4>Description<a class="headerlink" href="#id324" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id325">
+<h4>Examples<a class="headerlink" href="#id325" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id326">
+<h4>Prioritisation Factors<a class="headerlink" href="#id326" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id327">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id327" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id328">
+<h4>Related Components<a class="headerlink" href="#id328" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id329">
+<h4>Related Patterns<a class="headerlink" href="#id329" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="self-certification">
+<span id="component-self-certification"></span><h3>Self-Certification<a class="headerlink" href="#self-certification" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id330">
+<h4>Summary<a class="headerlink" href="#id330" title="Permalink to this headline">¶</a></h4>
+<p>So that standard users can describe the coverage and comprehensiveness of their data.</p>
+</div>
+<div class="section" id="id331">
+<h4>Description<a class="headerlink" href="#id331" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id332">
+<h4>Examples<a class="headerlink" href="#id332" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id333">
+<h4>Prioritisation Factors<a class="headerlink" href="#id333" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id334">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id334" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id335">
+<h4>Related Components<a class="headerlink" href="#id335" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id336">
+<h4>Related Patterns<a class="headerlink" href="#id336" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="shared-documents-folder">
+<span id="component-shared-documents-folder"></span><h3>Shared Documents Folder<a class="headerlink" href="#shared-documents-folder" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id337">
+<h4>Summary<a class="headerlink" href="#id337" title="Permalink to this headline">¶</a></h4>
+<p>Offering a public archive of meeting minutes, reports, presentations and other resources.</p>
+</div>
+<div class="section" id="id338">
+<h4>Description<a class="headerlink" href="#id338" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id339">
+<h4>Examples<a class="headerlink" href="#id339" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id340">
+<h4>Prioritisation Factors<a class="headerlink" href="#id340" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id341">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id341" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id342">
+<h4>Related Components<a class="headerlink" href="#id342" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id343">
+<h4>Related Patterns<a class="headerlink" href="#id343" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="slack">
+<span id="component-slack"></span><h3>Slack<a class="headerlink" href="#slack" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id344">
+<h4>Summary<a class="headerlink" href="#id344" title="Permalink to this headline">¶</a></h4>
+<p>For chat-type conversations with the community about development, adoption and use of the standard.</p>
+</div>
+<div class="section" id="id345">
+<h4>Description<a class="headerlink" href="#id345" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id346">
+<h4>Examples<a class="headerlink" href="#id346" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id347">
+<h4>Prioritisation Factors<a class="headerlink" href="#id347" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id348">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id348" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id349">
+<h4>Related Components<a class="headerlink" href="#id349" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id350">
+<h4>Related Patterns<a class="headerlink" href="#id350" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="specification">
+<span id="component-specification"></span><h3>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id351">
+<h4>Summary<a class="headerlink" href="#id351" title="Permalink to this headline">¶</a></h4>
+<p>Comprising of the schema, codelists and normative documentation.</p>
+</div>
+<div class="section" id="id352">
+<h4>Description<a class="headerlink" href="#id352" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id353">
+<h4>Examples<a class="headerlink" href="#id353" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id354">
+<h4>Prioritisation Factors<a class="headerlink" href="#id354" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id355">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id355" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id356">
+<h4>Related Components<a class="headerlink" href="#id356" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id357">
+<h4>Related Patterns<a class="headerlink" href="#id357" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="spreadsheet-template">
+<span id="component-spreadsheet-template"></span><h3>Spreadsheet Template<a class="headerlink" href="#spreadsheet-template" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id358">
+<h4>Summary<a class="headerlink" href="#id358" title="Permalink to this headline">¶</a></h4>
+<p>An editorialised template that can be filled in to provide data that meets the standard (Excel / AirTable etc.)</p>
+</div>
+<div class="section" id="id359">
+<h4>Description<a class="headerlink" href="#id359" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id360">
+<h4>Examples<a class="headerlink" href="#id360" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id361">
+<h4>Prioritisation Factors<a class="headerlink" href="#id361" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id362">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id362" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id363">
+<h4>Related Components<a class="headerlink" href="#id363" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id364">
+<h4>Related Patterns<a class="headerlink" href="#id364" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="training-resources">
+<span id="component-training-resources"></span><h3>Training Resources<a class="headerlink" href="#training-resources" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id365">
+<h4>Summary<a class="headerlink" href="#id365" title="Permalink to this headline">¶</a></h4>
+<p>Used in online and offline training workshops to introduce the standard.</p>
+</div>
+<div class="section" id="id366">
+<h4>Description<a class="headerlink" href="#id366" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id367">
+<h4>Examples<a class="headerlink" href="#id367" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id368">
+<h4>Prioritisation Factors<a class="headerlink" href="#id368" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id369">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id369" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id370">
+<h4>Related Components<a class="headerlink" href="#id370" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id371">
+<h4>Related Patterns<a class="headerlink" href="#id371" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="unit-tests">
+<span id="component-unit-tests"></span><h3>Unit Tests<a class="headerlink" href="#unit-tests" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id372">
+<h4>Summary<a class="headerlink" href="#id372" title="Permalink to this headline">¶</a></h4>
+<p>Automatically run whenever the specification, documentation or examples are updated.</p>
+</div>
+<div class="section" id="id373">
+<h4>Description<a class="headerlink" href="#id373" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id374">
+<h4>Examples<a class="headerlink" href="#id374" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id375">
+<h4>Prioritisation Factors<a class="headerlink" href="#id375" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id376">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id376" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id377">
+<h4>Related Components<a class="headerlink" href="#id377" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id378">
+<h4>Related Patterns<a class="headerlink" href="#id378" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="use-cases">
+<span id="component-use-cases"></span><h3>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id379">
+<h4>Summary<a class="headerlink" href="#id379" title="Permalink to this headline">¶</a></h4>
+<p>A description of the ways in which data from the standard could be used.</p>
+</div>
+<div class="section" id="id380">
+<h4>Description<a class="headerlink" href="#id380" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id381">
+<h4>Examples<a class="headerlink" href="#id381" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id382">
+<h4>Prioritisation Factors<a class="headerlink" href="#id382" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id383">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id383" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id384">
+<h4>Related Components<a class="headerlink" href="#id384" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id385">
+<h4>Related Patterns<a class="headerlink" href="#id385" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="use-case-mapping">
+<span id="component-use-case-mapping"></span><h3>Use-Case Mapping<a class="headerlink" href="#use-case-mapping" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id386">
+<h4>Summary<a class="headerlink" href="#id386" title="Permalink to this headline">¶</a></h4>
+<p>A cross-walk between outcomes from data use, and the fields or data requirements to enable them.</p>
+</div>
+<div class="section" id="id387">
+<h4>Description<a class="headerlink" href="#id387" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id388">
+<h4>Examples<a class="headerlink" href="#id388" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id389">
+<h4>Prioritisation Factors<a class="headerlink" href="#id389" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id390">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id390" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id391">
+<h4>Related Components<a class="headerlink" href="#id391" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id392">
+<h4>Related Patterns<a class="headerlink" href="#id392" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="user-tutorials">
+<span id="component-user-tutorials"></span><h3>User Tutorials<a class="headerlink" href="#user-tutorials" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id393">
+<h4>Summary<a class="headerlink" href="#id393" title="Permalink to this headline">¶</a></h4>
+<p>How to guidance on making use of published data</p>
+</div>
+<div class="section" id="id394">
+<h4>Description<a class="headerlink" href="#id394" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id395">
+<h4>Examples<a class="headerlink" href="#id395" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id396">
+<h4>Prioritisation Factors<a class="headerlink" href="#id396" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id397">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id397" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id398">
+<h4>Related Components<a class="headerlink" href="#id398" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id399">
+<h4>Related Patterns<a class="headerlink" href="#id399" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="extensions-registry">
+<span id="component-extensions-registry"></span><h3>Extensions Registry<a class="headerlink" href="#extensions-registry" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id400">
+<h4>Summary<a class="headerlink" href="#id400" title="Permalink to this headline">¶</a></h4>
+<p>A list of known extensions to the standard</p>
+</div>
+<div class="section" id="id401">
+<h4>Description<a class="headerlink" href="#id401" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id402">
+<h4>Examples<a class="headerlink" href="#id402" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id403">
+<h4>Prioritisation Factors<a class="headerlink" href="#id403" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id404">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id404" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id405">
+<h4>Related Components<a class="headerlink" href="#id405" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id406">
+<h4>Related Patterns<a class="headerlink" href="#id406" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="extensions-mechanism">
+<span id="component-extensions-mechanism"></span><h3>Extensions Mechanism<a class="headerlink" href="#extensions-mechanism" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id407">
+<h4>Summary<a class="headerlink" href="#id407" title="Permalink to this headline">¶</a></h4>
+<p>A mechanism for having optional new codelists, schema and documentation added to the standard.</p>
+</div>
+<div class="section" id="id408">
+<h4>Description<a class="headerlink" href="#id408" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id409">
+<h4>Examples<a class="headerlink" href="#id409" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id410">
+<h4>Prioritisation Factors<a class="headerlink" href="#id410" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id411">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id411" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id412">
+<h4>Related Components<a class="headerlink" href="#id412" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id413">
+<h4>Related Patterns<a class="headerlink" href="#id413" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="workshops">
+<span id="component-workshops"></span><h3>Workshops<a class="headerlink" href="#workshops" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id414">
+<h4>Summary<a class="headerlink" href="#id414" title="Permalink to this headline">¶</a></h4>
+<p>A mechanism for having optional new codelists, schema and documentation added to the standard.</p>
+</div>
+<div class="section" id="id415">
+<h4>Description<a class="headerlink" href="#id415" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id416">
+<h4>Examples<a class="headerlink" href="#id416" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id417">
+<h4>Prioritisation Factors<a class="headerlink" href="#id417" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id418">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id418" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id419">
+<h4>Related Components<a class="headerlink" href="#id419" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id420">
+<h4>Related Patterns<a class="headerlink" href="#id420" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="governance-body">
+<span id="component-governance-body"></span><h3>Governance Body<a class="headerlink" href="#governance-body" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id421">
+<h4>Summary<a class="headerlink" href="#id421" title="Permalink to this headline">¶</a></h4>
+<p>A mechanism for having optional new codelists, schema and documentation added to the standard.</p>
+</div>
+<div class="section" id="id422">
+<h4>Description<a class="headerlink" href="#id422" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id423">
+<h4>Examples<a class="headerlink" href="#id423" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id424">
+<h4>Prioritisation Factors<a class="headerlink" href="#id424" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id425">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id425" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id426">
+<h4>Related Components<a class="headerlink" href="#id426" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id427">
+<h4>Related Patterns<a class="headerlink" href="#id427" title="Permalink to this headline">¶</a></h4>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="dashboard-data-publication-statistics">
+<span id="component-dashboard"></span><h3>Dashboard (data publication statistics)<a class="headerlink" href="#dashboard-data-publication-statistics" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id428">
+<h4>Summary<a class="headerlink" href="#id428" title="Permalink to this headline">¶</a></h4>
+<p>A single location for accessing reports on the number of publishers, status of current publication, validation errors, coverage of key fields, use of extensions and other key facts.</p>
+</div>
+<div class="section" id="id429">
+<h4>Description<a class="headerlink" href="#id429" title="Permalink to this headline">¶</a></h4>
+<p>A dashboard helps to answer questions like:</p>
+<ul class="simple">
+<li>Who is publishing using the standard?</li>
+<li>How many publishers are using version 1.0 or 1.1?</li>
+<li>How many publishers are using this specific field?</li>
+<li>What values are used in this specific field?</li>
+<li>Which codelists are publishers using?</li>
+<li>Which are the most common validation errors?</li>
+<li>If we deprecate a particular field, which publishers will be affected?</li>
+</ul>
+</div>
+<div class="section" id="id430">
+<h4>Examples<a class="headerlink" href="#id430" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>The <a class="reference external" href="http://dashboard.iatistandard.org/">IATI Dashboard</a> fetches changed data on a nightly basis (based on data in the IATI registry) and builds a collection of statistical reports, as well as maintaining historical data to show change over time.</li>
+</ul>
+</div>
+<div class="section" id="id431">
+<h4>Prioritisation Factors<a class="headerlink" href="#id431" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id432">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id432" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id433">
+<h4>Related Components<a class="headerlink" href="#id433" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><a class="reference internal" href="#component-registry-of-datasets"><span class="std std-ref">Registry Of Datasets</span></a></li>
+</ul>
+</div>
+<div class="section" id="id434">
+<h4>Related Patterns<a class="headerlink" href="#id434" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="contact-relationship-management-crm">
+<span id="component-crm"></span><h3>Contact Relationship Management (CRM)<a class="headerlink" href="#contact-relationship-management-crm" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id435">
+<h4>Summary<a class="headerlink" href="#id435" title="Permalink to this headline">¶</a></h4>
+<p>A Contact Relationship Management (CRM) system can be used to track the different actors engaging with a standard, including implementers, users and support providers.</p>
+</div>
+<div class="section" id="id436">
+<h4>Description<a class="headerlink" href="#id436" title="Permalink to this headline">¶</a></h4>
+<p>A CRM may be used for:</p>
+<ul class="simple">
+<li><strong>Outreach and engagement</strong> - identifying potential standard adopters, users and champions, and keeping track of communication and engagement with them;</li>
+<li><strong>Knowledge management</strong> - keeping track of communication with particular standard adopters; making sure technical support and policy engagement is joined up; and providing access to consistent technical support answers;</li>
+<li><strong>Time tracking</strong> - to supported charging by helpdesk consultants, or to allow reporting on which adopters require the greatest investment of time and support;</li>
+<li><strong>Reporting</strong> - to track progress towards key adoption metrics, and to measure key performance indicators for a helpdesk;</li>
+</ul>
+<p>Useful CRM features for supporting a standard include:</p>
+<ul class="simple">
+<li>Contact profiles</li>
+<li>Task tracking</li>
+<li>Agile board</li>
+<li>E-mail integration or e-mail helpdesk</li>
+<li>Knowledge base</li>
+</ul>
+</div>
+<div class="section" id="id437">
+<h4>Examples<a class="headerlink" href="#id437" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>The Open Contracting Data Standard makes use of a customised instance of <a class="reference external" href="http://redmineup.com">RedmineUp</a>, using the helpdesk plugin to create new contacts for each incoming e-mail, and using time-tracking against tickets for regular reporting.</li>
+<li>360Giving uses Salesforce to track the progress of publishers.</li>
+</ul>
+</div>
+<div class="section" id="id438">
+<h4>Prioritisation Factors<a class="headerlink" href="#id438" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>The standard needs to report on levels of adoption</li>
+<li>The standard is providing a helpdesk to adopters</li>
+<li>There are multiple teams engaging with each adopters</li>
+</ul>
+</div>
+<div class="section" id="id439">
+<h4>Deprioritisation Factors<a class="headerlink" href="#id439" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>The standard is early stage</li>
+<li>There is no central support offer</li>
+</ul>
+</div>
+<div class="section" id="id440">
+<h4>Related Components<a class="headerlink" href="#id440" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="#component-helpdesk-email-address"><span class="std std-ref">Helpdesk e-mail address</span></a> | <a class="reference internal" href="#component-helpdesk-phone-number"><span class="std std-ref">Helpdesk phone number</span></a></p>
+</div>
+<div class="section" id="id441">
+<h4>Related Patterns<a class="headerlink" href="#id441" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../patterns/" class="btn btn-neutral float-right" title="Pattern library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../learning/" class="btn btn-neutral" title="Monitoring &amp; learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Open Data Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+    <a href="../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+
+</body>
+</html>

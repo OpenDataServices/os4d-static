@@ -1,0 +1,634 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Schema patterns &mdash; Open Data Services - Standards Lab Handbook 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex/"/>
+        <link rel="search" title="Search" href="../../search/"/>
+    <link rel="top" title="Open Data Services - Standards Lab Handbook 0.1 documentation" href="../../"/>
+        <link rel="up" title="Pattern library" href="../"/>
+        <link rel="next" title="Documentation patterns" href="../documentation/"/>
+        <link rel="prev" title="Pattern library" href="../"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../" class="icon icon-home"> Open Data Services - Standards Lab Handbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../development/">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../adoption/">Adoption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learning/">Monitoring &amp; learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/">Component library</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Pattern library</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Schema patterns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#top-object">Top-object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#solution">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#permissive-schema">Permissive schema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#related-patterns">Related patterns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#related-components">Related components</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#object-identifiers">Object identifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Related patterns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Related components</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spreadsheet-first">Spreadsheet-first</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deprecation">Deprecation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flexible-vocabularies">Flexible vocabularies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#packaging">Packaging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id20">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#immutability">Immutability</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id24">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#merging">Merging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id26">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">Related patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extensibility">Extensibility</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id31">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id32">Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id33">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id34">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/">Documentation patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../i18n/">Internationalisation patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translation/">Translation patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../versioning/">Versioning Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../policy/">Policy design patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/">Meta</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Open Data Services - Standards Lab Handbook</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../">Pattern library</a> &raquo;</li>
+        
+      <li>Schema patterns</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/patterns/schema.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div></div></blockquote>
+<div class="section" id="schema-patterns">
+<span id="patternpage-schema"></span><h1>Schema patterns<a class="headerlink" href="#schema-patterns" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#pattern-top"><span class="std std-ref">Top-object</span></a></li>
+<li><a class="reference internal" href="#pattern-permissive"><span class="std std-ref">Permissive schema</span></a></li>
+<li><a class="reference internal" href="#pattern-object-id"><span class="std std-ref">Object identifiers</span></a></li>
+<li><a class="reference internal" href="#pattern-spreadsheet"><span class="std std-ref">Spreadsheet-first</span></a></li>
+<li><a class="reference internal" href="#pattern-deprecation"><span class="std std-ref">Deprecation</span></a></li>
+<li><a class="reference internal" href="#pattern-vocabularies"><span class="std std-ref">Flexible vocabularies</span></a></li>
+<li><a class="reference internal" href="#pattern-packaging"><span class="std std-ref">Packaging</span></a></li>
+<li><a class="reference internal" href="#pattern-immutability"><span class="std std-ref">Immutability</span></a></li>
+<li><a class="reference internal" href="#pattern-merging"><span class="std std-ref">Merging</span></a></li>
+<li><a class="reference internal" href="#pattern-extensibility"><span class="std std-ref">Extensibility</span></a></li>
+</ul>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+<div class="section" id="top-object">
+<span id="pattern-top"></span><h2>Top-object<a class="headerlink" href="#top-object" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem">
+<h3>Problem<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h3>
+<p>Data is often stored in source systems using a relational data model that stores many related entities. Relational data can be represented in many different ways.</p>
+</div>
+<div class="section" id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
+<p>A standard is opinionated about the 'top-object' that describes the key entity being exchanged, and all other data is nested within this object.</p>
+</div>
+<div class="section" id="method">
+<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h3>
+<p>The selection of the top-object will be based on the conceptual model for the standard. It will need to be informed by consultation with data producers and users.</p>
+<p>Where a standard needs more than one top-object, consider treating the project as one of API design, rather than the design of a singular data standard.</p>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>The Open Contracting Data Standard uses 'Contracting Process' as it's top-object, nesting information on each stage of contracting within this. This partially reflects the data found during research (though this was mostly structured around the idea of a 'notice', a 'contract' or an 'award') and substantially reflects user-demand for joined up data from across all stages of contracting. The choice of 'contracting process' plays a substantial normative role and seeks to change how existing data systems are understood.</p>
+<p>The 360 Giving Data Standard uses Grant as it's top-concept, rather than grantmaking process. This reflects the design-principle of the standard to adopt a simple, static, representation of grants made.</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="permissive-schema">
+<span id="pattern-permissive"></span><h2>Permissive schema<a class="headerlink" href="#permissive-schema" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Problem<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>A schema can enforce validation rules. However, when data owners encounter lots of validation errors, it can act as a barrier to standard adoption.</p>
+<p>When a data owner does not have data to fill in a required field, or to fill it in the desired format, they may be prevented from using the standard by strict validation.</p>
+</div>
+<div class="section" id="id2">
+<h3>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Minimise the use of <code class="docutils literal"><span class="pre">required</span></code> properties and validation rules, unless absolutely necessary to the technical functioning of the standard.</p>
+<p>Indicate recommend fields through guidance, implementation tools and validation platforms.</p>
+<p>This builds on the idea of designing to allow for '<a class="reference external" href="http://conferences.sigcomm.org/sigcomm/2002/papers/tussle.pdf">the tussle</a>'. A policy-related standard provides the framework within which different data producers and users can tussle over the exact data that should be provided in a particular context.</p>
+<p>(The applicability of this pattern varies substantially based on the policy context of a standard.)</p>
+</div>
+<div class="section" id="id3">
+<h3>Method<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../../components/#component-rules-for-additional-checks"><span class="std std-ref">Additional checks</span></a> can be used to report data quality issues to users in a validator.</p>
+<p>A mapping document that indicates which fields, or field-value pairs are required for particular use-cases can guide contextualised recommendations about what to publish.</p>
+</div>
+<div class="section" id="id4">
+<h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>360 Giving <a class="reference external" href="https://github.com/ThreeSixtyGiving/standard/blob/master/schema/360-giving-schema.json#L430">specifies</a> just eight required fields on the main grants table.</p>
+</div>
+<div class="section" id="related-patterns">
+<h3>Related patterns<a class="headerlink" href="#related-patterns" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="pattern-quality">Quality framework</a>; <a class="reference external" href="pattern-use-case-mapping">Use-case mapping</a>;</p>
+</div>
+<div class="section" id="related-components">
+<h3>Related components<a class="headerlink" href="#related-components" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../../components/#component-rules-for-additional-checks"><span class="std std-ref">Rules For Additional Checks</span></a>; <a class="reference internal" href="../../components/#component-online-validator"><span class="std std-ref">Online Validator</span></a>;</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="object-identifiers">
+<span id="pattern-object-id"></span><h2>Object identifiers<a class="headerlink" href="#object-identifiers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Problem<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>When transforming data between serialisations, updating data, or comparing datasets, it can be difficult to work out how to handle nested objects.</p>
+</div>
+<div class="section" id="id6">
+<h3>Solution<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Provide every object with an identifier field.</p>
+</div>
+<div class="section" id="id7">
+<h3>Method<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Instead of:</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;objects&quot;</span><span class="p">:[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;First object&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Second object&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>always design a schema as:</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;objects&quot;</span><span class="p">:[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;First object&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;Second object&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../components/#component-conversion-tools"><span class="std std-ref">Flatten-tool</span></a> and our merging tools recognise <code class="docutils literal"><span class="pre">id</span></code> as a special property.</p>
+<p>This pattern is not needed for objects that are not contained in an array.</p>
+</div>
+<div class="section" id="id8">
+<h3>Example<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>See above.</p>
+</div>
+<div class="section" id="id9">
+<h3>Related patterns<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#pattern-spreadsheet"><span class="std std-ref">Spreadsheet first</span></a>;</p>
+</div>
+<div class="section" id="id10">
+<h3>Related components<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../../components/#component-conversion-tools"><span class="std std-ref">Conversion Tools</span></a>;</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="spreadsheet-first">
+<span id="pattern-spreadsheet"></span><h2>Spreadsheet-first<a class="headerlink" href="#spreadsheet-first" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>Problem<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>Many potential users of data are most comfortable with spreadsheet tools.</p>
+<p>Data structures which make sense in a hierarchical data format may be tricky to work with when flattened out.</p>
+</div>
+<div class="section" id="id12">
+<h3>Solution<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>Design with flattened representations in mind.</p>
+<p>Consider how a spreadsheet user would be able to analyse the data using simple spreadsheet functions such as pivot tables, or vLookup functions.</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="deprecation">
+<span id="pattern-deprecation"></span><h2>Deprecation<a class="headerlink" href="#deprecation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>Problem<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>Fields may need to be removed from a standard. When these are removed, users may not know how to update their data.</p>
+</div>
+<div class="section" id="id14">
+<h3>Solution<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>Mark fields as deprecated for at least one version prior to their removal. Provide a deprecation message that explains to users how to change their data.</p>
+</div>
+<div class="section" id="id15">
+<h3>Method<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>We use <a class="reference internal" href="../../development/schema/#section-deprecation-properties"><span class="std std-ref">extended JSON schema fields for deprecation</span></a>.</p>
+</div>
+<div class="section" id="id16">
+<h3>Example<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>OCDS Version 1.1 deprecated a number of fields. The validator will report when deprecated fields are encountered in data.</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="flexible-vocabularies">
+<span id="pattern-vocabularies"></span><h2>Flexible vocabularies<a class="headerlink" href="#flexible-vocabularies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3>Problem<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>Source systems may use many different classification schemes for their data. Getting data owners to harmonise the codelists and classifications they use, or to adopt common identifier schemes, can be very difficult - and may inhibit adoption of a standard.</p>
+</div>
+<div class="section" id="id18">
+<h3>Solution<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>Rather than just having a field for classification values, split this into at least:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">vocabulary</span></code> or <code class="docutils literal"><span class="pre">scheme</span></code> - the list/codelist/scheme from which identifiers or classifications are drawn;</li>
+<li><code class="docutils literal"><span class="pre">code</span></code> or <code class="docutils literal"><span class="pre">id</span></code> - the actual value from the specified list</li>
+</ul>
+<p>Provide a codelist of recognise vocabularies or schemes, and provide recommendations on the one to use where appropriate.</p>
+<p>Where mappings are available between vocabularies and schemes, make users aware of this.</p>
+</div>
+<div class="section" id="id19">
+<h3>Example<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://org-id.guide/about">org-id.guide</a> provides a list of <code class="docutils literal"><span class="pre">scheme</span></code> values for identifying organisations. For example, the following identifier block is recommended by org-id.guide to represent a UK company number.</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>{
+    &quot;scheme&quot;: &quot;GB-COH&quot;,
+    &quot;id&quot;: &quot;09506232
+}
+</pre></div>
+</div>
+<p>An alternative pattern, that org-id.guide recognises, is concatenation of scheme and identifier, such that the above company number could also be represented as 'GB-COH-09506232'.</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="packaging">
+<span id="pattern-packaging"></span><h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id20">
+<h3>Problem<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>When data is exchanged users may need to know about the source, the version of schema being used and the license data is under.</p>
+</div>
+<div class="section" id="id21">
+<h3>Solution<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>Provide a packaging schema, in which an array of the schema's <a class="reference internal" href="#pattern-top"><span class="std std-ref">top objects</span></a> can be nested.</p>
+</div>
+<div class="section" id="id22">
+<h3>Method<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>A separate packaging schema can use recognised meta-data keywords. The package provides meta-data about the data, rather than describing the entities that the schema represents.</p>
+<p>A package schema can use the JSON schema <code class="docutils literal"><span class="pre">$ref</span></code> element to point to the main schema of the standard.</p>
+<p>In some cases, meta-data may need to be embedded within each top object, particularly in cases where data from multiple sources it to be merged together.</p>
+</div>
+<div class="section" id="id23">
+<h3>Example<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<p>The Open Contracting Data Standard has a release package and record package schema</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="immutability">
+<span id="pattern-immutability"></span><h2>Immutability<a class="headerlink" href="#immutability" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id24">
+<h3>Problem<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<p>Users may want to understand how data has changed over time. Source systems may or may not provide a full change-log.</p>
+</div>
+<div class="section" id="id25">
+<h3>Solution<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<p>The normative guidance of a standard may specify immutability. Any top-object with a given <code class="docutils literal"><span class="pre">id</span></code>, once created, should not change. The <code class="docutils literal"><span class="pre">id</span></code> value should be incremented whenever the object changes.</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="merging">
+<span id="pattern-merging"></span><h2>Merging<a class="headerlink" href="#merging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id26">
+<h3>Problem<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<p>When data about the same entity is produced from different systems, and at different times, and the <a class="reference internal" href="#pattern-immutability"><span class="std std-ref">immutability</span></a> pattern is used, it can be tricky to get a full picture of the current state of an entity.</p>
+</div>
+<div class="section" id="id27">
+<h3>Solution<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<p>Merging together data in sequential order (oldest first) can create an object that reflects the latest state of the entity represented.</p>
+</div>
+<div class="section" id="id28">
+<h3>Method<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<p>To be documented.</p>
+</div>
+<div class="section" id="id29">
+<h3>Example<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="http://standard.open-contracting.org/latest/en/schema/merging/">OCDS releases and records model</a> makes use of merging.</p>
+</div>
+<div class="section" id="id30">
+<h3>Related patterns<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#pattern-immutability"><span class="std std-ref">Immutability</span></a>; <a class="reference internal" href="#pattern-object-id"><span class="std std-ref">Object identifiers</span></a>;</p>
+<hr class="docutils" />
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+<div class="section" id="extensibility">
+<span id="pattern-extensibility"></span><h2>Extensibility<a class="headerlink" href="#extensibility" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id31">
+<h3>Problem<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<p>Source systems may contain data not covered by the standard, leading to under-publication of valuable information.</p>
+<p>A group of users may have a need for additional fields not specified by the standard.</p>
+</div>
+<div class="section" id="id32">
+<h3>Solution<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<p>An extension mechanism can allow data owners and data users to declare and document additional fields that they publish or would like to see published.</p>
+</div>
+<div class="section" id="id33">
+<h3>Method<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<p>Extensions can be represented using a JSON Merge Patch.</p>
+<p>An extension registry can help data owners and users to discover relevant extensions.</p>
+<p>When extensions are declared in packaging meta-data, validators and other tools can check data against them.</p>
+</div>
+<div class="section" id="id34">
+<h3>Example<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://github.com/open-contracting/standard_extension_template">OCDS Extension Template</a> and <a class="reference external" href="http://standard.open-contracting.org/latest/en/extensions/">extensions registry</a> document a technical approach to extensions.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../documentation/" class="btn btn-neutral float-right" title="Documentation patterns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Pattern library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Open Data Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+    <a href="../../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+
+</body>
+</html>

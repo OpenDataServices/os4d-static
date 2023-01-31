@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Internationalisation patterns &mdash; Open Data Services - Standards Lab Handbook 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex/"/>
+        <link rel="search" title="Search" href="../../search/"/>
+    <link rel="top" title="Open Data Services - Standards Lab Handbook 0.1 documentation" href="../../"/>
+        <link rel="up" title="Pattern library" href="../"/>
+        <link rel="next" title="Translation patterns" href="../translation/"/>
+        <link rel="prev" title="Documentation patterns" href="../documentation/"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../" class="icon icon-home"> Open Data Services - Standards Lab Handbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../development/">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../adoption/">Adoption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learning/">Monitoring &amp; learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/">Component library</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Pattern library</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../schema/">Schema patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/">Documentation patterns</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Internationalisation patterns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schema-design-for-a-global-audience">Schema design for a global audience</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#problem">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#internationalise-links-in-the-schema">Internationalise links in the schema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples-for-a-global-audience">Examples for a global audience</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../translation/">Translation patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../versioning/">Versioning Patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../policy/">Policy design patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/">Meta</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Open Data Services - Standards Lab Handbook</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../">Pattern library</a> &raquo;</li>
+        
+      <li>Internationalisation patterns</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/patterns/i18n.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div></div></blockquote>
+<div class="section" id="internationalisation-patterns">
+<span id="patternpage-i18n"></span><h1>Internationalisation patterns<a class="headerlink" href="#internationalisation-patterns" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#pattern-i18n-schema-design"><span class="std std-ref">Schema design for a global audience</span></a></li>
+<li><a class="reference internal" href="#pattern-i18n-links-schema"><span class="std std-ref">Internationalise links in the schema</span></a></li>
+<li><a class="reference internal" href="#pattern-i18n-examples"><span class="std std-ref">Examples for a global audience</span></a></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="schema-design-for-a-global-audience">
+<span id="pattern-i18n-schema-design"></span><h2>Schema design for a global audience<a class="headerlink" href="#schema-design-for-a-global-audience" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem">
+<h3>Problem<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h3>
+<p>Data structures may be based on local cultural assumptions, or known falsehoods.</p>
+</div>
+<div class="section" id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h3>
+<p>There are a number of <a class="reference external" href="https://github.com/kdeldycke/awesome-falsehood">lists of 'falsehoods programmers believe'</a> that provide a useful corrective to assumptions that might otherwise make it tricky to use data structures to represent names, addresses, locations or other information from particular parts of the world.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="internationalise-links-in-the-schema">
+<span id="pattern-i18n-links-schema"></span><h2>Internationalise links in the schema<a class="headerlink" href="#internationalise-links-in-the-schema" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Problem<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Links from within schema field descriptions may point to only the English  docs.</p>
+</div>
+<div class="section" id="id2">
+<h3>Solution<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>When linking to documentation from within schema field descriptions, use <code class="docutils literal"><span class="pre">{lang}</span></code> tokens, and replace these when compiling schemas and documentation, so that users are always linked to their own language versions of the documentation.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="examples-for-a-global-audience">
+<span id="pattern-i18n-examples"></span><h2>Examples for a global audience<a class="headerlink" href="#examples-for-a-global-audience" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Problem<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Examples may be less relevant outside of the context they were originally written in.</p>
+</div>
+<div class="section" id="id4">
+<h3>Solution<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Consider the cultural relevance of the examples used in documentation, or explore whether examples can be generated using tools that support localisation.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../translation/" class="btn btn-neutral float-right" title="Translation patterns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../documentation/" class="btn btn-neutral" title="Documentation patterns" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Open Data Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+    <a href="../../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+
+</body>
+</html>

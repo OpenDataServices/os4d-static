@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Schema development &mdash; Open Data Services - Standards Lab Handbook 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex/"/>
+        <link rel="search" title="Search" href="../../search/"/>
+    <link rel="top" title="Open Data Services - Standards Lab Handbook 0.1 documentation" href="../../"/>
+        <link rel="up" title="Development" href="../"/>
+        <link rel="next" title="Documentation" href="../documentation/"/>
+        <link rel="prev" title="Stages of standard development" href="../stages/"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../" class="icon icon-home"> Open Data Services - Standards Lab Handbook
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../">Development</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../research/">Research</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stages/">Stages of standard development</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Schema development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schema-language">Schema language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#serializations">Serializations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extended-json-schema">Extended JSON schema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#codelist-properties">Codelist properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deprecation-properties">Deprecation properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#merge-strategies">Merge strategies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#design-patterns">Design patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../translation/">Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../governance/">Governance and Revision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tooling/">Tooling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../adoption/">Adoption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../learning/">Monitoring &amp; learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../components/">Component library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../patterns/">Pattern library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/">About us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/">Meta</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Open Data Services - Standards Lab Handbook</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../">Development</a> &raquo;</li>
+        
+      <li>Schema development</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/development/schema.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="schema-development">
+<h1>Schema development<a class="headerlink" href="#schema-development" title="Permalink to this headline">¶</a></h1>
+<p>This section outlines a number of the pattens we commonly use to develop the schema for an open data standard.</p>
+<div class="note admonition">
+<p class="first admonition-title">Learning / reflection</p>
+<p>We currently jump straight from the conceptual framework document, to working up the data model and schema for a standard in a schema language.</p>
+<p class="last">This differs <a class="reference external" href="https://github.com/open-contracting-archive/technical-approach#data-model">from the approach proposed here</a> of maintaining the <strong>data model</strong> as a narrative document, only then given form by a schema as a reference implementation.</p>
+</div>
+<div class="section" id="schema-language">
+<h2>Schema language<a class="headerlink" href="#schema-language" title="Permalink to this headline">¶</a></h2>
+<p>Our preferred schema language is <a class="reference external" href="https://tools.ietf.org/html/draft-zyp-json-schema-04">JSON Schema v0.4</a>.</p>
+<p>This allows us to provide field structures and definitions. Although less expressive than other schema languages, the constraints of JSON Schema enable us to focus on keeping data simple enough for a wide range of users.</p>
+<p>We generally use simple CSV files to represent codelists.</p>
+<p>We have a number of extensions to JSON Schema 0.4 we use (documented below).</p>
+</div>
+<div class="section" id="serializations">
+<h2>Serializations<a class="headerlink" href="#serializations" title="Permalink to this headline">¶</a></h2>
+<p>We design with a range of serializations in mind, and, where possible, to enable round-tripping of data between different serializations.</p>
+<p>In particular, through <a class="reference external" href="http://flatten-tool.readthedocs.io">flatten-tool</a> we design with support for:</p>
+<ul class="simple">
+<li>Structured JSON serialization;</li>
+<li>Excel serialization;</li>
+<li>CSV serialization.</li>
+</ul>
+<p><a class="reference external" href="http://flatten-tool.readthedocs.io/en/latest/unflatten/#human-friendly-headings-using-a-json-schema-with-titles">Flatten-tool</a> can use the titles in a schema to provide 'friendly' column headings, and with use of a <a class="reference external" href="http://flatten-tool.readthedocs.io/en/latest/unflatten/#metadata-tab">metatab</a> also supports packaging meta-data and options to control how spreadsheets are parsed.</p>
+</div>
+<div class="section" id="extended-json-schema">
+<h2>Extended JSON schema<a class="headerlink" href="#extended-json-schema" title="Permalink to this headline">¶</a></h2>
+<p>We use a number of custom properties in our JSON Schema implementation. A <a class="reference external" href="https://github.com/open-contracting/standard/blob/6e538252dd08344222b5cd16b864ed0a2a866197/standard/schema/metaschema/meta-schema-patch.json">patch against JSON Schema 0.4 to include these is found here</a>.</p>
+<div class="section" id="codelist-properties">
+<h3>Codelist properties<a class="headerlink" href="#codelist-properties" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">codelist</span></code> - the filename of a .csv file that contains at least a <code class="docutils literal"><span class="pre">Code</span></code> column. Used by the CoVE validator to check for acceptable values.</li>
+<li><code class="docutils literal"><span class="pre">openCodelist</span></code> - a boolean value to indicate whether values can <strong>only</strong> come from the codelist, or whether additional values not on the codelist are permitted. When <code class="docutils literal"><span class="pre">openCodelist</span></code> = 'true' then encountering a value not on the codelist should generate a warning. when <code class="docutils literal"><span class="pre">openCodelist</span></code> = 'false' then encountering a value not on the codelist should generate an error.</li>
+</ul>
+</div>
+<div class="section" id="deprecation-properties">
+<span id="section-deprecation-properties"></span><h3>Deprecation properties<a class="headerlink" href="#deprecation-properties" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>&quot;deprecation is the discouragement of use of some terminology, feature, design, or practice; typically because it has been superseded or is no longer considered efficient or safe – but without completely removing it or prohibiting its use.&quot;</div></blockquote>
+<p>See: <a class="reference external" href="https://en.wikipedia.org/wiki/Deprecation">Deprecation (Wikipedia)</a></p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">deprecated</span></code> - and object to indicate that the field is deprecated, consisting of fields for:<ul>
+<li><code class="docutils literal"><span class="pre">description</span></code> - a message that explains the deprecation, and that should be presented by validators to any publisher using this field.</li>
+<li><code class="docutils literal"><span class="pre">deprecatedVersion</span></code> - a string indicating the version in which the field was first deprecated.</li>
+</ul>
+</li>
+</ul>
+<p>We also use the column title <code class="docutils literal"><span class="pre">Deprecated</span></code> with a version number as the cell value in codelist CSV files when a code has been deprecated.</p>
+</div>
+<div class="section" id="merge-strategies">
+<h3>Merge strategies<a class="headerlink" href="#merge-strategies" title="Permalink to this headline">¶</a></h3>
+<p>The Open Contracting Data Standard describes an approach to merge together releases of data from different point in time. We add a number of properties to indicate how merging should be approached.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">omitWhemMerged</span></code></li>
+<li><code class="docutils literal"><span class="pre">wholeListMerge</span></code></li>
+<li><code class="docutils literal"><span class="pre">versionId</span></code></li>
+</ul>
+<p>Behaviour for these is <a class="reference external" href="http://standard.open-contracting.org/1.1/en/schema/merging/#merging-rules">described in the OCDS documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="design-patterns">
+<h2>Design patterns<a class="headerlink" href="#design-patterns" title="Permalink to this headline">¶</a></h2>
+<p>Developing a good schema is an art as much as a science. It requires sensitivity to the needs of both data producers and data users, and an understanding of the incentive structures that will drive adoption of a standard.</p>
+<p>The following section provides links to a non-exhaustive set of design patterns that can be drawn upon when developing a schema.</p>
+<p><a class="reference internal" href="../../patterns/schema/#patternpage-schema"><span class="std std-ref">Schema patterns</span></a>:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../../patterns/schema/#pattern-top"><span class="std std-ref">Top-object</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-permissive"><span class="std std-ref">Permissive schema</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-object-id"><span class="std std-ref">Object identifiers</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-spreadsheet"><span class="std std-ref">Spreadsheet-first</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-deprecation"><span class="std std-ref">Deprecation</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-vocabularies"><span class="std std-ref">Flexible vocabularies</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-packaging"><span class="std std-ref">Packaging</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-immutability"><span class="std std-ref">Immutability</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-merging"><span class="std std-ref">Merging</span></a></li>
+<li><a class="reference internal" href="../../patterns/schema/#pattern-extensibility"><span class="std std-ref">Extensibility</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../documentation/" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../stages/" class="btn btn-neutral" title="Stages of standard development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Open Data Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+    <a href="../../privacy-notice/">Privacy Notice</a>.
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//mon.opendataservices.coop/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '12']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+
+
+</body>
+</html>
